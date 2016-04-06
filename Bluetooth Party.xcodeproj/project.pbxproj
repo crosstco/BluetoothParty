@@ -14,10 +14,6 @@
 		3BEC004F1CB5602C00DAE876 /* Bluetooth_PartyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC004E1CB5602C00DAE876 /* Bluetooth_PartyTests.swift */; };
 		3BEC005A1CB5602C00DAE876 /* Bluetooth_PartyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC00591CB5602C00DAE876 /* Bluetooth_PartyUITests.swift */; };
 		3BEC00681CB5605500DAE876 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEC00671CB5605500DAE876 /* Main.storyboard */; };
-		3BEC00701CB5606800DAE876 /* GameSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC00691CB5606800DAE876 /* GameSelectionViewController.swift */; };
-		3BEC00711CB5606800DAE876 /* GameSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC006A1CB5606800DAE876 /* GameSettingsViewController.swift */; };
-		3BEC00721CB5606800DAE876 /* GameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC006B1CB5606800DAE876 /* GameListViewController.swift */; };
-		3BEC00731CB5606800DAE876 /* PlayerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC006C1CB5606800DAE876 /* PlayerListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,10 +47,6 @@
 		3BEC00591CB5602C00DAE876 /* Bluetooth_PartyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluetooth_PartyUITests.swift; sourceTree = "<group>"; };
 		3BEC005B1CB5602C00DAE876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BEC00671CB5605500DAE876 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		3BEC00691CB5606800DAE876 /* GameSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSelectionViewController.swift; sourceTree = "<group>"; };
-		3BEC006A1CB5606800DAE876 /* GameSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSettingsViewController.swift; sourceTree = "<group>"; };
-		3BEC006B1CB5606800DAE876 /* GameListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListViewController.swift; sourceTree = "<group>"; };
-		3BEC006C1CB5606800DAE876 /* PlayerListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,10 +131,6 @@
 		3BEC006D1CB5606800DAE876 /* Menus */ = {
 			isa = PBXGroup;
 			children = (
-				3BEC00691CB5606800DAE876 /* GameSelectionViewController.swift */,
-				3BEC006A1CB5606800DAE876 /* GameSettingsViewController.swift */,
-				3BEC006B1CB5606800DAE876 /* GameListViewController.swift */,
-				3BEC006C1CB5606800DAE876 /* PlayerListViewController.swift */,
 			);
 			name = Menus;
 			path = "../../../../../Desktop/Bluetooth Party/Bluetooth Party";
@@ -299,11 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BEC003C1CB5602B00DAE876 /* ViewController.swift in Sources */,
-				3BEC00731CB5606800DAE876 /* PlayerListViewController.swift in Sources */,
 				3BEC003A1CB5602B00DAE876 /* AppDelegate.swift in Sources */,
-				3BEC00721CB5606800DAE876 /* GameListViewController.swift in Sources */,
-				3BEC00711CB5606800DAE876 /* GameSettingsViewController.swift in Sources */,
-				3BEC00701CB5606800DAE876 /* GameSelectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +504,7 @@
 				3BEC00601CB5602C00DAE876 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3BEC00611CB5602C00DAE876 /* Build configuration list for PBXNativeTarget "Bluetooth PartyTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +513,7 @@
 				3BEC00631CB5602C00DAE876 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3BEC00641CB5602C00DAE876 /* Build configuration list for PBXNativeTarget "Bluetooth PartyUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +522,7 @@
 				3BEC00661CB5602C00DAE876 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
