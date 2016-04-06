@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		3BEC003A1CB5602B00DAE876 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC00391CB5602B00DAE876 /* AppDelegate.swift */; };
 		3BEC003C1CB5602B00DAE876 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC003B1CB5602B00DAE876 /* ViewController.swift */; };
-		3BEC003F1CB5602B00DAE876 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEC003D1CB5602B00DAE876 /* Main.storyboard */; };
 		3BEC00411CB5602B00DAE876 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEC00401CB5602B00DAE876 /* Assets.xcassets */; };
 		3BEC00441CB5602B00DAE876 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEC00421CB5602B00DAE876 /* LaunchScreen.storyboard */; };
 		3BEC004F1CB5602C00DAE876 /* Bluetooth_PartyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC004E1CB5602C00DAE876 /* Bluetooth_PartyTests.swift */; };
 		3BEC005A1CB5602C00DAE876 /* Bluetooth_PartyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC00591CB5602C00DAE876 /* Bluetooth_PartyUITests.swift */; };
+		3BEC00681CB5605500DAE876 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEC00671CB5605500DAE876 /* Main.storyboard */; };
+		3BEC00701CB5606800DAE876 /* GameSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC00691CB5606800DAE876 /* GameSelectionViewController.swift */; };
+		3BEC00711CB5606800DAE876 /* GameSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC006A1CB5606800DAE876 /* GameSettingsViewController.swift */; };
+		3BEC00721CB5606800DAE876 /* GameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC006B1CB5606800DAE876 /* GameListViewController.swift */; };
+		3BEC00731CB5606800DAE876 /* PlayerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC006C1CB5606800DAE876 /* PlayerListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +41,6 @@
 		3BEC00361CB5602B00DAE876 /* Bluetooth Party.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bluetooth Party.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEC00391CB5602B00DAE876 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BEC003B1CB5602B00DAE876 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3BEC003E1CB5602B00DAE876 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3BEC00401CB5602B00DAE876 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BEC00431CB5602B00DAE876 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BEC00451CB5602B00DAE876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +50,11 @@
 		3BEC00551CB5602C00DAE876 /* Bluetooth PartyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bluetooth PartyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEC00591CB5602C00DAE876 /* Bluetooth_PartyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluetooth_PartyUITests.swift; sourceTree = "<group>"; };
 		3BEC005B1CB5602C00DAE876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BEC00671CB5605500DAE876 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3BEC00691CB5606800DAE876 /* GameSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSelectionViewController.swift; sourceTree = "<group>"; };
+		3BEC006A1CB5606800DAE876 /* GameSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSettingsViewController.swift; sourceTree = "<group>"; };
+		3BEC006B1CB5606800DAE876 /* GameListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListViewController.swift; sourceTree = "<group>"; };
+		3BEC006C1CB5606800DAE876 /* PlayerListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +105,12 @@
 		3BEC00381CB5602B00DAE876 /* Bluetooth Party */ = {
 			isa = PBXGroup;
 			children = (
+				3BEC006D1CB5606800DAE876 /* Menus */,
+				3BEC006E1CB5606800DAE876 /* DuelingGames */,
+				3BEC006F1CB5606800DAE876 /* PartyGames */,
+				3BEC00671CB5605500DAE876 /* Main.storyboard */,
 				3BEC00391CB5602B00DAE876 /* AppDelegate.swift */,
 				3BEC003B1CB5602B00DAE876 /* ViewController.swift */,
-				3BEC003D1CB5602B00DAE876 /* Main.storyboard */,
 				3BEC00401CB5602B00DAE876 /* Assets.xcassets */,
 				3BEC00421CB5602B00DAE876 /* LaunchScreen.storyboard */,
 				3BEC00451CB5602B00DAE876 /* Info.plist */,
@@ -123,6 +134,34 @@
 				3BEC005B1CB5602C00DAE876 /* Info.plist */,
 			);
 			path = "Bluetooth PartyUITests";
+			sourceTree = "<group>";
+		};
+		3BEC006D1CB5606800DAE876 /* Menus */ = {
+			isa = PBXGroup;
+			children = (
+				3BEC00691CB5606800DAE876 /* GameSelectionViewController.swift */,
+				3BEC006A1CB5606800DAE876 /* GameSettingsViewController.swift */,
+				3BEC006B1CB5606800DAE876 /* GameListViewController.swift */,
+				3BEC006C1CB5606800DAE876 /* PlayerListViewController.swift */,
+			);
+			name = Menus;
+			path = "../../../../../Desktop/Bluetooth Party/Bluetooth Party";
+			sourceTree = "<group>";
+		};
+		3BEC006E1CB5606800DAE876 /* DuelingGames */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DuelingGames;
+			path = "../../../../../Desktop/Bluetooth Party/Bluetooth Party";
+			sourceTree = "<group>";
+		};
+		3BEC006F1CB5606800DAE876 /* PartyGames */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PartyGames;
+			path = "../../../../../Desktop/Bluetooth Party/Bluetooth Party";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +271,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BEC00681CB5605500DAE876 /* Main.storyboard in Resources */,
 				3BEC00441CB5602B00DAE876 /* LaunchScreen.storyboard in Resources */,
 				3BEC00411CB5602B00DAE876 /* Assets.xcassets in Resources */,
-				3BEC003F1CB5602B00DAE876 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +299,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BEC003C1CB5602B00DAE876 /* ViewController.swift in Sources */,
+				3BEC00731CB5606800DAE876 /* PlayerListViewController.swift in Sources */,
 				3BEC003A1CB5602B00DAE876 /* AppDelegate.swift in Sources */,
+				3BEC00721CB5606800DAE876 /* GameListViewController.swift in Sources */,
+				3BEC00711CB5606800DAE876 /* GameSettingsViewController.swift in Sources */,
+				3BEC00701CB5606800DAE876 /* GameSelectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +339,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3BEC003D1CB5602B00DAE876 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3BEC003E1CB5602B00DAE876 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3BEC00421CB5602B00DAE876 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
