@@ -9,10 +9,10 @@
 import UIKit
 
 class LobbyListViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
-
+    
 }
