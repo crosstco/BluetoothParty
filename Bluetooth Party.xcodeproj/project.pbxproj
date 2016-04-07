@@ -20,6 +20,7 @@
 		3BEC00881CB6AFF900DAE876 /* PlayerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC00871CB6AFF900DAE876 /* PlayerListViewController.swift */; };
 		3BEC008A1CB6B16900DAE876 /* JoinWithNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC00891CB6B16900DAE876 /* JoinWithNameViewController.swift */; };
 		3BEC008C1CB6B19300DAE876 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC008B1CB6B19300DAE876 /* GameViewController.swift */; };
+		3BEC008E1CB6B6B900DAE876 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC008D1CB6B6B900DAE876 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		3BEC00871CB6AFF900DAE876 /* PlayerListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerListViewController.swift; sourceTree = "<group>"; };
 		3BEC00891CB6B16900DAE876 /* JoinWithNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinWithNameViewController.swift; sourceTree = "<group>"; };
 		3BEC008B1CB6B19300DAE876 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		3BEC008D1CB6B6B900DAE876 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				3BEC007E1CB6AF4500DAE876 /* Menus */,
+				3BEC008D1CB6B6B900DAE876 /* Game.swift */,
 				3BEC00801CB6AF5300DAE876 /* Group */,
 				3BEC007F1CB6AF4F00DAE876 /* Dueling */,
 				3BEC00671CB5605500DAE876 /* Main.storyboard */,
@@ -302,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BEC003C1CB5602B00DAE876 /* ViewController.swift in Sources */,
+				3BEC008E1CB6B6B900DAE876 /* Game.swift in Sources */,
 				3BEC00881CB6AFF900DAE876 /* PlayerListViewController.swift in Sources */,
 				3BEC003A1CB5602B00DAE876 /* AppDelegate.swift in Sources */,
 				3BEC00841CB6AF7900DAE876 /* GameSettingsViewController.swift in Sources */,
