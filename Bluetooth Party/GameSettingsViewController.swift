@@ -8,9 +8,15 @@
 
 import UIKit
 
-class GameSettingsViewController: UIViewController {
-
-    override func viewDidLoad() {
+class GameSettingsViewController: UIViewController
+{
+    @IBOutlet weak var lobbyTitleTextField: UITextField!
+    @IBOutlet weak var numberOfPlayersTextField: UITextField!
+    @IBOutlet weak var playerNameTextField: UITextField!
+    
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
     }
