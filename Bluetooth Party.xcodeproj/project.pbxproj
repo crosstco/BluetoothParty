@@ -14,10 +14,12 @@
 		3BEC004F1CB5602C00DAE876 /* Bluetooth_PartyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC004E1CB5602C00DAE876 /* Bluetooth_PartyTests.swift */; };
 		3BEC005A1CB5602C00DAE876 /* Bluetooth_PartyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC00591CB5602C00DAE876 /* Bluetooth_PartyUITests.swift */; };
 		3BEC00681CB5605500DAE876 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEC00671CB5605500DAE876 /* Main.storyboard */; };
-		3BEC00701CB5606800DAE876 /* GameSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC00691CB5606800DAE876 /* GameSelectionViewController.swift */; };
-		3BEC00711CB5606800DAE876 /* GameSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC006A1CB5606800DAE876 /* GameSettingsViewController.swift */; };
-		3BEC00721CB5606800DAE876 /* GameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC006B1CB5606800DAE876 /* GameListViewController.swift */; };
-		3BEC00731CB5606800DAE876 /* PlayerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC006C1CB5606800DAE876 /* PlayerListViewController.swift */; };
+		3BEC00821CB6AF6800DAE876 /* GameSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC00811CB6AF6800DAE876 /* GameSelectionViewController.swift */; };
+		3BEC00841CB6AF7900DAE876 /* GameSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC00831CB6AF7900DAE876 /* GameSettingsViewController.swift */; };
+		3BEC00861CB6AFE700DAE876 /* LobbyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC00851CB6AFE700DAE876 /* LobbyListViewController.swift */; };
+		3BEC00881CB6AFF900DAE876 /* PlayerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC00871CB6AFF900DAE876 /* PlayerListViewController.swift */; };
+		3BEC008A1CB6B16900DAE876 /* JoinWithNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC00891CB6B16900DAE876 /* JoinWithNameViewController.swift */; };
+		3BEC008C1CB6B19300DAE876 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC008B1CB6B19300DAE876 /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,10 +53,12 @@
 		3BEC00591CB5602C00DAE876 /* Bluetooth_PartyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluetooth_PartyUITests.swift; sourceTree = "<group>"; };
 		3BEC005B1CB5602C00DAE876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BEC00671CB5605500DAE876 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		3BEC00691CB5606800DAE876 /* GameSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSelectionViewController.swift; sourceTree = "<group>"; };
-		3BEC006A1CB5606800DAE876 /* GameSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSettingsViewController.swift; sourceTree = "<group>"; };
-		3BEC006B1CB5606800DAE876 /* GameListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameListViewController.swift; sourceTree = "<group>"; };
-		3BEC006C1CB5606800DAE876 /* PlayerListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerListViewController.swift; sourceTree = "<group>"; };
+		3BEC00811CB6AF6800DAE876 /* GameSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSelectionViewController.swift; sourceTree = "<group>"; };
+		3BEC00831CB6AF7900DAE876 /* GameSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSettingsViewController.swift; sourceTree = "<group>"; };
+		3BEC00851CB6AFE700DAE876 /* LobbyListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LobbyListViewController.swift; sourceTree = "<group>"; };
+		3BEC00871CB6AFF900DAE876 /* PlayerListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerListViewController.swift; sourceTree = "<group>"; };
+		3BEC00891CB6B16900DAE876 /* JoinWithNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinWithNameViewController.swift; sourceTree = "<group>"; };
+		3BEC008B1CB6B19300DAE876 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,12 +109,11 @@
 		3BEC00381CB5602B00DAE876 /* Bluetooth Party */ = {
 			isa = PBXGroup;
 			children = (
-				3BEC006D1CB5606800DAE876 /* Menus */,
-				3BEC006E1CB5606800DAE876 /* DuelingGames */,
-				3BEC006F1CB5606800DAE876 /* PartyGames */,
+				3BEC007E1CB6AF4500DAE876 /* Menus */,
+				3BEC00801CB6AF5300DAE876 /* Group */,
+				3BEC007F1CB6AF4F00DAE876 /* Dueling */,
 				3BEC00671CB5605500DAE876 /* Main.storyboard */,
 				3BEC00391CB5602B00DAE876 /* AppDelegate.swift */,
-				3BEC003B1CB5602B00DAE876 /* ViewController.swift */,
 				3BEC00401CB5602B00DAE876 /* Assets.xcassets */,
 				3BEC00421CB5602B00DAE876 /* LaunchScreen.storyboard */,
 				3BEC00451CB5602B00DAE876 /* Info.plist */,
@@ -136,32 +139,32 @@
 			path = "Bluetooth PartyUITests";
 			sourceTree = "<group>";
 		};
-		3BEC006D1CB5606800DAE876 /* Menus */ = {
+		3BEC007E1CB6AF4500DAE876 /* Menus */ = {
 			isa = PBXGroup;
 			children = (
-				3BEC00691CB5606800DAE876 /* GameSelectionViewController.swift */,
-				3BEC006A1CB5606800DAE876 /* GameSettingsViewController.swift */,
-				3BEC006B1CB5606800DAE876 /* GameListViewController.swift */,
-				3BEC006C1CB5606800DAE876 /* PlayerListViewController.swift */,
+				3BEC003B1CB5602B00DAE876 /* ViewController.swift */,
+				3BEC00811CB6AF6800DAE876 /* GameSelectionViewController.swift */,
+				3BEC00831CB6AF7900DAE876 /* GameSettingsViewController.swift */,
+				3BEC00851CB6AFE700DAE876 /* LobbyListViewController.swift */,
+				3BEC00871CB6AFF900DAE876 /* PlayerListViewController.swift */,
+				3BEC00891CB6B16900DAE876 /* JoinWithNameViewController.swift */,
+				3BEC008B1CB6B19300DAE876 /* GameViewController.swift */,
 			);
 			name = Menus;
-			path = "../../../../../Desktop/Bluetooth Party/Bluetooth Party";
 			sourceTree = "<group>";
 		};
-		3BEC006E1CB5606800DAE876 /* DuelingGames */ = {
+		3BEC007F1CB6AF4F00DAE876 /* Dueling */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = DuelingGames;
-			path = "../../../../../Desktop/Bluetooth Party/Bluetooth Party";
+			name = Dueling;
 			sourceTree = "<group>";
 		};
-		3BEC006F1CB5606800DAE876 /* PartyGames */ = {
+		3BEC00801CB6AF5300DAE876 /* Group */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = PartyGames;
-			path = "../../../../../Desktop/Bluetooth Party/Bluetooth Party";
+			name = Group;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,11 +302,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BEC003C1CB5602B00DAE876 /* ViewController.swift in Sources */,
-				3BEC00731CB5606800DAE876 /* PlayerListViewController.swift in Sources */,
+				3BEC00881CB6AFF900DAE876 /* PlayerListViewController.swift in Sources */,
 				3BEC003A1CB5602B00DAE876 /* AppDelegate.swift in Sources */,
-				3BEC00721CB5606800DAE876 /* GameListViewController.swift in Sources */,
-				3BEC00711CB5606800DAE876 /* GameSettingsViewController.swift in Sources */,
-				3BEC00701CB5606800DAE876 /* GameSelectionViewController.swift in Sources */,
+				3BEC00841CB6AF7900DAE876 /* GameSettingsViewController.swift in Sources */,
+				3BEC008C1CB6B19300DAE876 /* GameViewController.swift in Sources */,
+				3BEC00861CB6AFE700DAE876 /* LobbyListViewController.swift in Sources */,
+				3BEC00821CB6AF6800DAE876 /* GameSelectionViewController.swift in Sources */,
+				3BEC008A1CB6B16900DAE876 /* JoinWithNameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +525,7 @@
 				3BEC00601CB5602C00DAE876 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3BEC00611CB5602C00DAE876 /* Build configuration list for PBXNativeTarget "Bluetooth PartyTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +534,7 @@
 				3BEC00631CB5602C00DAE876 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3BEC00641CB5602C00DAE876 /* Build configuration list for PBXNativeTarget "Bluetooth PartyUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +543,7 @@
 				3BEC00661CB5602C00DAE876 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
