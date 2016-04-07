@@ -10,9 +10,18 @@ import UIKit
 
 class JoinWithNameViewController: UIViewController {
 
-    override func viewDidLoad() {
+    @IBOutlet weak var playerNameTextField: UITextField!
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
+    }
+    
+    
+    @IBAction func joinGameButton(sender: UIButton)
+    {
+        
     }
 
 }
