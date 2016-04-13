@@ -9,5 +9,17 @@
 import UIKit
 
 class Game: NSObject {
+    
+    var name : String
+    var numPlayers : Int
+    var viewController : ViewController
+    
+    
+    init(name : String, numPlayers : Int, viewController : ViewController) {
+        
+        self.name = name
+        self.numPlayers = numPlayers
+        self.viewController = viewController
+    }
 
 }
