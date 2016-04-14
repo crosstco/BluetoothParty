@@ -16,10 +16,20 @@ class GameSelectionViewController: UIViewController, UITabBarDelegate, UITableVi
     var duelingGames : [Game] = []
     var groupGames : [Game] = []
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        tabBar.delegate = self
+        
+        tabBar.selectedItem = tabBar.items![0]
+        
+        duelingGames.append(RPSGame())
+    }
+    
+    func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
+        tableView.reloadData()
     }
     
     
@@ -34,9 +44,17 @@ class GameSelectionViewController: UIViewController, UITabBarDelegate, UITableVi
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        var array = []
+        
+        if(tabBar.selectedItem == tabBar.items![0]) {
+            array = duelingGames
+        } else {
+            array = groupGames
+        }
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("gameCell", forIndexPath: indexPath)
-        cell.textLabel?.text = "Game1" //placeholder
-        cell.detailTextLabel?.text = "Cool" //placeholder
+        cell.textLabel?.text = array[indexPath.row].name //placeholder
         return cell
     }
     
