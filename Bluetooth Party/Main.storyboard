@@ -405,7 +405,7 @@
         <!--Second View Controller-->
         <scene sceneID="VeI-iE-Uno">
             <objects>
-                <viewController id="IgD-bA-cH0" customClass="SecondViewController" customModule="RockPaperScissors" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="IgD-bA-cH0" customClass="SecondViewController" customModule="Bluetooth_Party" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hhi-K1-ABC"/>
                         <viewControllerLayoutGuide type="bottom" id="1ZQ-O9-rGg"/>
@@ -516,7 +516,7 @@
         <!--Fourth View Controller-->
         <scene sceneID="MlV-MH-uFw">
             <objects>
-                <viewController id="q8T-rQ-gMF" customClass="FourthViewController" customModule="RockPaperScissors" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="q8T-rQ-gMF" customClass="FourthViewController" customModule="Bluetooth_Party" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BNX-RZ-n4T"/>
                         <viewControllerLayoutGuide type="bottom" id="gHG-Ra-LLJ"/>
@@ -609,7 +609,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rOp-Wt-h1c"/>
+        <segue reference="XFL-NT-yu4"/>
         <segue reference="JCV-Vj-LmA"/>
     </inferredMetricsTieBreakers>
 </document>
