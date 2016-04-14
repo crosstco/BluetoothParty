@@ -21,8 +21,15 @@ class GameSelectionViewController: UIViewController, UITabBarDelegate, UITableVi
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        tabBar.delegate = self
+        
+        tabBar.selectedItem = tabBar.items![0]
         
         duelingGames.append(RPSGame())
+    }
+    
+    func tabBar(tabBar: UITabBar, didSelectItem item: UITabBarItem) {
+        tableView.reloadData()
     }
     
     
