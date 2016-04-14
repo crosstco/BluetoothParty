@@ -58,4 +58,17 @@ class GameSelectionViewController: UIViewController, UITabBarDelegate, UITableVi
         return cell
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        let nextVC = segue.destinationViewController as! GameSettingsViewController
+        var array = []
+        if(tabBar.selectedItem == tabBar.items![0]) {
+            array = duelingGames
+        } else {
+            array = groupGames
+        }
+        let selectedRow = tableView.indexPathForSelectedRow?.row
+        nextVC.game = array[selectedRow!] as! Game
+    }
+    
 }
