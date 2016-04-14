@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3B16D2E21CBE9B1000BE562C /* RPSGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16D2E11CBE9B1000BE562C /* RPSGame.swift */; };
 		3B16D2E71CBE9C6800BE562C /* RPSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16D2E61CBE9C6800BE562C /* RPSViewController.swift */; };
+		3B16D2F01CBFF11600BE562C /* MatchmakingServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16D2EF1CBFF11600BE562C /* MatchmakingServer.swift */; };
+		3B16D2F21CBFF12800BE562C /* MatchmakingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16D2F11CBFF12800BE562C /* MatchmakingClient.swift */; };
+		3B16D2F61CBFF2A900BE562C /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B16D2F51CBFF2A900BE562C /* MultipeerConnectivity.framework */; };
 		3BEC003A1CB5602B00DAE876 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC00391CB5602B00DAE876 /* AppDelegate.swift */; };
 		3BEC003C1CB5602B00DAE876 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC003B1CB5602B00DAE876 /* ViewController.swift */; };
 		3BEC00411CB5602B00DAE876 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEC00401CB5602B00DAE876 /* Assets.xcassets */; };
@@ -45,6 +48,9 @@
 /* Begin PBXFileReference section */
 		3B16D2E11CBE9B1000BE562C /* RPSGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPSGame.swift; sourceTree = "<group>"; };
 		3B16D2E61CBE9C6800BE562C /* RPSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPSViewController.swift; sourceTree = "<group>"; };
+		3B16D2EF1CBFF11600BE562C /* MatchmakingServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchmakingServer.swift; sourceTree = "<group>"; };
+		3B16D2F11CBFF12800BE562C /* MatchmakingClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchmakingClient.swift; sourceTree = "<group>"; };
+		3B16D2F51CBFF2A900BE562C /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
 		3BEC00361CB5602B00DAE876 /* Bluetooth Party.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bluetooth Party.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEC00391CB5602B00DAE876 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BEC003B1CB5602B00DAE876 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B16D2F61CBFF2A900BE562C /* MultipeerConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,9 +107,19 @@
 			name = GameViewControllers;
 			sourceTree = "<group>";
 		};
+		3B16D2E81CBFEF3D00BE562C /* Matchmaking */ = {
+			isa = PBXGroup;
+			children = (
+				3B16D2EF1CBFF11600BE562C /* MatchmakingServer.swift */,
+				3B16D2F11CBFF12800BE562C /* MatchmakingClient.swift */,
+			);
+			name = Matchmaking;
+			sourceTree = "<group>";
+		};
 		3BEC002D1CB5602B00DAE876 = {
 			isa = PBXGroup;
 			children = (
+				3B16D2F51CBFF2A900BE562C /* MultipeerConnectivity.framework */,
 				3BEC00381CB5602B00DAE876 /* Bluetooth Party */,
 				3BEC004D1CB5602C00DAE876 /* Bluetooth PartyTests */,
 				3BEC00581CB5602C00DAE876 /* Bluetooth PartyUITests */,
@@ -123,6 +140,7 @@
 		3BEC00381CB5602B00DAE876 /* Bluetooth Party */ = {
 			isa = PBXGroup;
 			children = (
+				3B16D2E81CBFEF3D00BE562C /* Matchmaking */,
 				3B16D2E31CBE9B9700BE562C /* GameViewControllers */,
 				3BEC007E1CB6AF4500DAE876 /* Menus */,
 				3BEC008D1CB6B6B900DAE876 /* Game.swift */,
@@ -319,6 +337,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BEC003C1CB5602B00DAE876 /* ViewController.swift in Sources */,
+				3B16D2F01CBFF11600BE562C /* MatchmakingServer.swift in Sources */,
+				3B16D2F21CBFF12800BE562C /* MatchmakingClient.swift in Sources */,
 				3B16D2E21CBE9B1000BE562C /* RPSGame.swift in Sources */,
 				3BEC008E1CB6B6B900DAE876 /* Game.swift in Sources */,
 				3BEC00881CB6AFF900DAE876 /* PlayerListViewController.swift in Sources */,

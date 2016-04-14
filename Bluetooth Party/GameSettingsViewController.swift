@@ -15,6 +15,8 @@ class GameSettingsViewController: UIViewController
     @IBOutlet weak var playerNameTextField: UITextField!
     
     
+    var game : Game = Game()
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
