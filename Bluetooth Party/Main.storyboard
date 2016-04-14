@@ -18,16 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Bluetooth Party" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yg5-k7-gGA">
-                                <rect key="frame" x="33" y="47" width="310" height="65"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="310" id="xBu-tr-Sfn"/>
-                                    <constraint firstAttribute="height" constant="65" id="xzU-9F-bXu"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWB-dg-2EH">
                                 <rect key="frame" x="117" y="398" width="142" height="43"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -36,7 +26,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="tu9-l8-xMS" kind="show" id="3go-T5-IFL"/>
+                                    <segue destination="wHr-XN-HWs" kind="show" id="HK2-kJ-vfA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGx-bw-8Uo">
@@ -51,9 +41,19 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="596-Uf-TDM" kind="show" id="tiW-wd-g1g"/>
+                                    <segue destination="ACy-uY-eQp" kind="show" id="eIl-1D-RHs"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bluetooth Party" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yg5-k7-gGA">
+                                <rect key="frame" x="33" y="72" width="310" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="310" id="xBu-tr-Sfn"/>
+                                    <constraint firstAttribute="height" constant="65" id="xzU-9F-bXu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.59509655625474867" blue="0.78683298938679247" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -72,7 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-674.5" y="187.5"/>
+            <point key="canvasLocation" x="137.5" y="187.5"/>
         </scene>
         <!--Lobby List View Controller-->
         <scene sceneID="JgB-2S-Cxk">
@@ -200,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="76x-aR-w3L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-40.5" y="187.5"/>
+            <point key="canvasLocation" x="771.5" y="187.5"/>
         </scene>
         <!--Game Settings View Controller-->
         <scene sceneID="eiW-Ca-81Z">
@@ -251,7 +251,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Mq-aO-Dk8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="599.5" y="187.5"/>
+            <point key="canvasLocation" x="1411.5" y="187.5"/>
         </scene>
         <!--Join With Name View Controller-->
         <scene sceneID="CTc-eD-slS">
@@ -368,43 +368,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bBM-mh-plu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1207.5" y="956.5"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="nkE-O4-nkT">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="596-Uf-TDM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="W3n-qV-wwc"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8zB-B4-tiA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="ACy-uY-eQp" kind="relationship" relationship="rootViewController" id="Tlk-g7-7Gz"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qgn-HE-6XA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-40.5" y="-587.5"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="pGK-pY-oy2">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tu9-l8-xMS" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WGd-Cg-iLA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="wHr-XN-HWs" kind="relationship" relationship="rootViewController" id="4Rh-nF-hUP"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OnO-1r-M9Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1306.5" y="956.5"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="VeI-iE-Uno">
@@ -610,6 +573,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uzY-Ef-l0x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-800.5" y="2186.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lVn-sx-9B7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PdK-vG-SQM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OG0-92-ao1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="spD-cP-R1A"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ts1-zj-rlR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-675" y="187"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
