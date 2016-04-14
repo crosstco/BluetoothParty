@@ -13,6 +13,9 @@ class PlayerListViewController: UIViewController, UITableViewDataSource, UITable
     
     @IBOutlet weak var myTableView: UITableView!
     
+    var lobbyTitle : String = ""
+    var game : Game = Game()
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -23,14 +26,13 @@ class PlayerListViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let myCell = myTableView.dequeueReusableCellWithIdentifier("playerCell", forIndexPath: indexPath)
-        myCell.textLabel?.text = "Player"
-        myCell.detailTextLabel?.text = "Game Type"
+        myCell.textLabel?.text = game.players[indexPath.row]
         return myCell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 1 //: replace 1 with number of players in lobby
+        return game.players.count
     }
     
 }
