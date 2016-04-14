@@ -12,8 +12,9 @@ class RPSGame: Game {
     
     var selection : String = ""
     
-    init() {
-        super.init(name: "RPS", numPlayers: 2, viewController: RPSViewController())
+    override init()
+    {
+        super.init(name: "RPS", numPlayers: 2, viewController: RPSViewController(), players: [""])
     }
     
 }
