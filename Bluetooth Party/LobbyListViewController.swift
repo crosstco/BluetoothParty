@@ -11,6 +11,10 @@ import UIKit
 class LobbyListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
     @IBOutlet weak var myTableView: UITableView!
+    
+    var lobbyTitle = ""
+    var game : Game = Game()
+    var playerName : String = ""
 
     override func viewDidLoad()
     {
@@ -28,8 +32,20 @@ class LobbyListViewController: UIViewController, UITableViewDataSource, UITableV
     {
         let myCell = myTableView.dequeueReusableCellWithIdentifier("lobbyCell", forIndexPath: indexPath)
         myCell.textLabel?.text = "Lobby Title"
+        lobbyTitle = (myCell.textLabel?.text)!
         myCell.detailTextLabel?.text = "Game Type"
         return myCell
+    }
+    
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        
+        let nextVC = segue.destinationViewController as! PlayerListViewController
+        nextVC.lobbyTitle = lobbyTitle
+        
+        
     }
 
 

@@ -12,6 +12,8 @@ class JoinWithNameViewController: UIViewController {
 
     @IBOutlet weak var playerNameTextField: UITextField!
     
+
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -19,9 +21,10 @@ class JoinWithNameViewController: UIViewController {
     }
     
     
-    @IBAction func joinGameButton(sender: UIButton)
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-        
+        let nextVC = segue.destinationViewController as! LobbyListViewController
+        nextVC.playerName = playerNameTextField.text!
     }
 
 }

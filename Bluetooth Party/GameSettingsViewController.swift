@@ -16,7 +16,7 @@ class GameSettingsViewController: UIViewController
     
     var game : Game = Game()
     
-    var game : Game = Game()
+
     
     override func viewDidLoad()
     {
