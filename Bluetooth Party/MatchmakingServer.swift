@@ -10,39 +10,81 @@ import UIKit
 import GameKit
 import MultipeerConnectivity
 
-class MatchmakingServer: NSObject, MCSessionDelegate {
+class MatchmakingServer: NSObject {
     
     var maxClients : Int
     var connectedClients = []
     var session : MCSession
     
     
-    init(maxClients: Int, session: MCSession) {
+    let serviceAdvertiser: MCNearbyServiceAdvertiser
+    
+    
+    init(maxClients: Int, myPeerID: MCPeerID) {
+        
+        self.session = MCSession(peer: myPeerID)
+        self.serviceAdvertiser = MCNearbyServiceAdvertiser(peer: myPeerID, discoveryInfo: nil, serviceType: "btp-game") //POI
+        
         self.maxClients = maxClients
-        self.session = session
+        
+        super.init()
+        
+        serviceAdvertiser.delegate = self
+        serviceAdvertiser.startAdvertisingPeer()
         
         session.delegate = self
     }
     
+    deinit {
+        self.serviceAdvertiser.stopAdvertisingPeer()
+    }
     
+    
+    
+    func startAcceptingConnectionForSessionID(sessionID: String) {
+        
+        connectedClients = NSMutableArray(capacity: maxClients)
+        session.delegate = self
+        
+    }
+}
+
+    
+    extension MatchmakingServer: MCSessionDelegate {
     
     func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
-        <#code#>
+        NSLog("%@", "didReceiveData: \(data)")
+
     }
     
     func session(session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, withProgress progress: NSProgress) {
-        <#code#>
+        NSLog("%@", "didFinishReceivingResourceWithName")
+
     }
     
     func session(session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, atURL localURL: NSURL, withError error: NSError?) {
-        <#code#>
+        NSLog("%@", "didFinishReceivingResourceWithName")
+
     }
     
     func session(session: MCSession, didReceiveStream stream: NSInputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
-        <#code#>
+        NSLog("%@", "didReceiveStream")
     }
     
     func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
-        <#code#>
+        NSLog("%@", "peer \(peerID) didChangeState: \(state)")
+    }
+}
+
+
+
+extension MatchmakingServer: MCNearbyServiceAdvertiserDelegate {
+    
+    func advertiser(advertiser: MCNearbyServiceAdvertiser, didNotStartAdvertisingPeer error: NSError) {
+        NSLog("%@", "didNotStartAdvertisingPeer: \(error)")
+    }
+    
+    func advertiser(advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: NSData?, invitationHandler: (Bool, MCSession) -> Void) {
+        NSLog("%@", "didRecieveInformationFromPeer: \(peerID)")
     }
 }
