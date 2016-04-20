@@ -360,10 +360,10 @@
             </objects>
             <point key="canvasLocation" x="665.5" y="1032.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="PHT-68-tJ8">
             <objects>
-                <viewController id="Llh-vJ-U2c" sceneMemberID="viewController">
+                <viewController id="Llh-vJ-U2c" customClass="GameViewController" customModule="Bluetooth_Party" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="liE-xv-ZOg"/>
                         <viewControllerLayoutGuide type="bottom" id="MHf-Ut-Ht5"/>
