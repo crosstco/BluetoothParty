@@ -25,6 +25,7 @@ class JoinWithNameViewController: UIViewController {
     {
         let nextVC = segue.destinationViewController as! LobbyListViewController
         nextVC.playerName = playerNameTextField.text!
+       
     }
 
 }
