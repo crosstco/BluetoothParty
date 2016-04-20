@@ -288,8 +288,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="joinGameButton:" destination="Wdv-nV-ND9" eventType="touchUpInside" id="5oT-T0-8wf"/>
-                                    <segue destination="wHr-XN-HWs" kind="show" id="oZH-g5-Fw8"/>
+                                    <segue destination="wHr-XN-HWs" kind="show" id="YTd-WL-90k"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -361,10 +360,10 @@
             </objects>
             <point key="canvasLocation" x="665.5" y="1032.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="PHT-68-tJ8">
             <objects>
-                <viewController id="Llh-vJ-U2c" sceneMemberID="viewController">
+                <viewController id="Llh-vJ-U2c" customClass="GameViewController" customModule="Bluetooth_Party" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="liE-xv-ZOg"/>
                         <viewControllerLayoutGuide type="bottom" id="MHf-Ut-Ht5"/>
