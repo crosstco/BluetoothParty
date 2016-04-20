@@ -12,6 +12,10 @@ import MultipeerConnectivity
 
 class MatchmakingServer: NSObject {
     
+    var serverTitle : String
+    var gameType : String
+    var hostPeerID : MCPeerID
+    
     var maxClients : Int
     var connectedClients = []
     var session : MCSession
@@ -20,10 +24,14 @@ class MatchmakingServer: NSObject {
     let serviceAdvertiser: MCNearbyServiceAdvertiser
     
     
-    init(maxClients: Int, myPeerID: MCPeerID) {
+    init(serverTitle : String, gameType : String, maxClients: Int, myPeerID: MCPeerID) {
         
-        self.session = MCSession(peer: myPeerID)
-        self.serviceAdvertiser = MCNearbyServiceAdvertiser(peer: myPeerID, discoveryInfo: nil, serviceType: "btp-game") //POI
+        self.serverTitle = serverTitle
+        self.gameType = gameType
+        self.hostPeerID = myPeerID
+        
+        self.session = MCSession(peer: hostPeerID)
+        self.serviceAdvertiser = MCNearbyServiceAdvertiser(peer: hostPeerID, discoveryInfo: nil, serviceType: "btp-game") //POI
         
         self.maxClients = maxClients
         
