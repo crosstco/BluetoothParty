@@ -37,7 +37,9 @@ class PlayerListViewController: UIViewController, UITableViewDataSource, UITable
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-        let myPlayers : [Player] = []
+        let nextVC = segue.destinationViewController as! GameViewController
+        nextVC.game = game
+        nextVC.lobbyTitle = lobbyTitle
     }
     
 }
