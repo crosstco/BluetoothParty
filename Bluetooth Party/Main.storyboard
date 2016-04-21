@@ -553,6 +553,16 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMD-2f-6yY">
+                                <rect key="frame" x="130" y="628" width="114" height="31"/>
+                                <color key="backgroundColor" red="0.1058120202" green="0.078933500569999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Tap for Result">
+                                    <color key="titleColor" red="0.9057962437" green="0.9057962437" blue="0.9057962437" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapForResult:" destination="q8T-rQ-gMF" eventType="touchUpInside" id="T3w-9F-Pg2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -561,8 +571,10 @@
                     <connections>
                         <outlet property="cpuView" destination="DoA-HG-Kjv" id="DsZ-ep-guR"/>
                         <outlet property="cpuWeapon" destination="HOC-AM-C57" id="V5P-AY-Dse"/>
-                        <outlet property="yourView" destination="92f-pC-Icz" id="iFA-Oh-OVE"/>
-                        <outlet property="yourWeapon" destination="bhg-HB-Ltd" id="Mou-Qx-uz1"/>
+                        <outlet property="player2View" destination="DoA-HG-Kjv" id="sLV-Sm-zGM"/>
+                        <outlet property="player2Weapon" destination="HOC-AM-C57" id="XhT-BE-EpQ"/>
+                        <outlet property="yourView" destination="92f-pC-Icz" id="Axp-Df-Rv3"/>
+                        <outlet property="yourWeapon" destination="bhg-HB-Ltd" id="MWb-um-C52"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTi-IE-p60" userLabel="First Responder" sceneMemberID="firstResponder"/>
