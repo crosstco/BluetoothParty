@@ -73,7 +73,7 @@
 		3BEC00891CB6B16900DAE876 /* JoinWithNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinWithNameViewController.swift; sourceTree = "<group>"; };
 		3BEC008B1CB6B19300DAE876 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		3BEC008D1CB6B6B900DAE876 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		3F8158291CC7D7A600815111 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		3FD66F3B1CC7D6CC007A85BC /* RPS2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPS2ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				3B16D2E61CBE9C6800BE562C /* RPSViewController.swift */,
+				3FD66F3B1CC7D6CC007A85BC /* RPS2ViewController.swift */,
 			);
 			name = GameViewControllers;
 			sourceTree = "<group>";
@@ -349,6 +350,7 @@
 				3BEC008E1CB6B6B900DAE876 /* Game.swift in Sources */,
 				3BEC00881CB6AFF900DAE876 /* PlayerListViewController.swift in Sources */,
 				3BEC003A1CB5602B00DAE876 /* AppDelegate.swift in Sources */,
+				3FD66F3C1CC7D6CC007A85BC /* RPS2ViewController.swift in Sources */,
 				3BEC00841CB6AF7900DAE876 /* GameSettingsViewController.swift in Sources */,
 				3B16D2E71CBE9C6800BE562C /* RPSViewController.swift in Sources */,
 				3BEC008C1CB6B19300DAE876 /* GameViewController.swift in Sources */,
