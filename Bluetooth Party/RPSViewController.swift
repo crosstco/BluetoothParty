@@ -47,7 +47,7 @@ class RPSViewController: UIViewController
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
         let nextVC = segue.destinationViewController as! RPS2ViewController
-        nextVC
+        nextVC.weaponString = weaponString
         
     }
     
