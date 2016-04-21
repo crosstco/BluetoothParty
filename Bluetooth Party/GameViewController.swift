@@ -8,9 +8,12 @@
 
 import UIKit
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController
+{
+    var players : [Player] = []
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         
     }
