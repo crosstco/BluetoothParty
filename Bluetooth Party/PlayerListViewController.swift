@@ -35,9 +35,9 @@ class PlayerListViewController: UIViewController, UITableViewDataSource, UITable
         return game.players.count
     }
     
-    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-        <#code#>
+        let myPlayers : [Player] = []
     }
     
 }
