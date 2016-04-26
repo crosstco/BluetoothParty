@@ -34,7 +34,7 @@ class MatchmakingClient: NSObject {
     var availableServers: NSMutableArray
     let serviceBrowser: MCNearbyServiceBrowser
     
-    let delegate: MatchmakingClientDelegate
+    var delegate: MatchmakingClientDelegate? = nil
     
      var clientState: ClientState
     
@@ -45,10 +45,10 @@ class MatchmakingClient: NSObject {
         session = MCSession(peer: myPeerID)
         availableServers = NSMutableArray(capacity: 10)
         clientState = .ClientStateIdle
+        serviceBrowser = MCNearbyServiceBrowser(peer: myPeerID, serviceType: serviceType)
         
         super.init()
         
-        serviceBrowser.delegate = self
         serviceBrowser.startBrowsingForPeers()
     }
     deinit {
@@ -138,7 +138,7 @@ extension MatchmakingClient: MCNearbyServiceBrowserDelegate {
         if !availableServers.containsObject(peerID) {
             availableServers.addObject(peerID)
             
-            self.delegate.matchmakingClient(self, serverBecameAvailable: peerID)
+            self.delegate!.matchmakingClient(self, serverBecameAvailable: peerID)
             }
 
         }
@@ -152,7 +152,7 @@ extension MatchmakingClient: MCNearbyServiceBrowserDelegate {
         if availableServers.containsObject(peerID) {
             availableServers.removeObject(peerID)
             
-            self.delegate.matchmakingClient(self, serverBecameUnavailable: peerID)
+            self.delegate!.matchmakingClient(self, serverBecameUnavailable: peerID)
             }
         }
     }
