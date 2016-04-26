@@ -10,58 +10,117 @@ import UIKit
 import MultipeerConnectivity
 import GameKit
 
+protocol MatchmakingClientDelegate {
+    
+    func matchmakingClient(client: MatchmakingClient, serverBecameAvailable peerID: MCPeerID)
+    
+    func matchmakingClient(client: MatchmakingClient, serverBecameUnavailable peerID: MCPeerID)
+}
+
+enum ClientState {
+    
+    case ClientStateIdle
+    case ClientStateSearchingForServers
+    case ClientStateConnecting
+    case ClientStateConnected
+    
+}
+
 class MatchmakingClient: NSObject {
     
+    let serviceType = "btp-game"
+    
     var session: MCSession
-    
-    var availableServers = []
-    
+    var availableServers: NSMutableArray
     let serviceBrowser: MCNearbyServiceBrowser
+    
+    let delegate: MatchmakingClientDelegate
+    
+     var clientState: ClientState
     
     
     
     init(myPeerID: MCPeerID) {
         
         session = MCSession(peer: myPeerID)
-        self.serviceBrowser = MCNearbyServiceBrowser(peer: myPeerID, serviceType: "btp-game") //POI
-        
         availableServers = NSMutableArray(capacity: 10)
+        clientState = .ClientStateIdle
         
         super.init()
         
         serviceBrowser.delegate = self
         serviceBrowser.startBrowsingForPeers()
-        
     }
     deinit {
         serviceBrowser.stopBrowsingForPeers()
     }
     
+    
+    func connectToServerWithPeerID(peerID: MCPeerID) {
+    
+        clientState = .ClientStateConnecting
+        let serverPeerID = peerID
+        
+        
+        
+        //CONNECT TO SERVER HERE//////////////////////////////////////////
+    }
+    
+    
+    func startSearchingForServersWithSessionID(sessionID: String) { //stub method
+        if clientState == .ClientStateIdle {
+            clientState = .ClientStateSearchingForServers
+        }
+    }
+    
+    
+    func availableServerCount() -> Int {
+        return availableServers.count
+    }
+    
+    func peerIDForAvailableServerAtIndex(index: Int) -> MCPeerID {
+        return availableServers.objectAtIndex(index) as! MCPeerID
+    }
+    
+    func displayNameForPeerID(peerID: MCPeerID) -> String {
+        return peerID.displayName
+    }
+    
+    
 }
+
+//extension MatchmakingClient: MatchmakingClientDelegate {
+//    
+//    func matchmakingClient(client: MatchmakingClient, serverBecameAvailable peerID: MCPeerID) {
+//        
+//    }
+//    
+//    func matchmakingClient(client: MatchmakingClient, serverBecameUnavailable peerID: MCPeerID) {
+//        
+//    }
+//    
+//}
 
 extension MatchmakingClient: MCSessionDelegate {
     
+    func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
+        
+    }
+    
     func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
-        NSLog("%@", "didReceiveData: \(data)")
         
     }
     
     func session(session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, withProgress progress: NSProgress) {
-        NSLog("%@", "didFinishReceivingResourceWithName")
         
     }
     
     func session(session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, atURL localURL: NSURL, withError error: NSError?) {
-        NSLog("%@", "didFinishReceivingResourceWithName")
         
     }
     
     func session(session: MCSession, didReceiveStream stream: NSInputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
-        NSLog("%@", "didReceiveStream")
-    }
-    
-    func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
-        NSLog("%@", "peer \(peerID) didChangeState: \(state)")
+        
     }
     
 }
@@ -69,16 +128,32 @@ extension MatchmakingClient: MCSessionDelegate {
 extension MatchmakingClient: MCNearbyServiceBrowserDelegate {
     
     func browser(browser: MCNearbyServiceBrowser, didNotStartBrowsingForPeers error: NSError) {
-        NSLog("%@", "didNotStartBrowsingForPeers: \(error)")
+        
     }
     
     func browser(browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) {
-        NSLog("%@", "foundPeer: \(peerID)")
+        
+        if clientState == .ClientStateSearchingForServers {
+        
+        if !availableServers.containsObject(peerID) {
+            availableServers.addObject(peerID)
+            
+            self.delegate.matchmakingClient(self, serverBecameAvailable: peerID)
+            }
+
+        }
         
     }
     
     func browser(browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
-        NSLog("%@", "lostPeer: \(peerID)")
+        
+        if clientState == .ClientStateSearchingForServers {
+        
+        if availableServers.containsObject(peerID) {
+            availableServers.removeObject(peerID)
+            
+            self.delegate.matchmakingClient(self, serverBecameUnavailable: peerID)
+            }
+        }
     }
-    
 }
