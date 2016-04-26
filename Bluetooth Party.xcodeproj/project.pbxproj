@@ -12,7 +12,6 @@
 		3B16D2F01CBFF11600BE562C /* MatchmakingServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16D2EF1CBFF11600BE562C /* MatchmakingServer.swift */; };
 		3B16D2F21CBFF12800BE562C /* MatchmakingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16D2F11CBFF12800BE562C /* MatchmakingClient.swift */; };
 		3B16D2F61CBFF2A900BE562C /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B16D2F51CBFF2A900BE562C /* MultipeerConnectivity.framework */; };
-		3B16D2F81CC1587000BE562C /* MatchmakingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16D2F71CC1587000BE562C /* MatchmakingManager.swift */; };
 		3BEC003A1CB5602B00DAE876 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC00391CB5602B00DAE876 /* AppDelegate.swift */; };
 		3BEC003C1CB5602B00DAE876 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC003B1CB5602B00DAE876 /* ViewController.swift */; };
 		3BEC00411CB5602B00DAE876 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEC00401CB5602B00DAE876 /* Assets.xcassets */; };
@@ -52,7 +51,6 @@
 		3B16D2EF1CBFF11600BE562C /* MatchmakingServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchmakingServer.swift; sourceTree = "<group>"; };
 		3B16D2F11CBFF12800BE562C /* MatchmakingClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchmakingClient.swift; sourceTree = "<group>"; };
 		3B16D2F51CBFF2A900BE562C /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
-		3B16D2F71CC1587000BE562C /* MatchmakingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchmakingManager.swift; sourceTree = "<group>"; };
 		3BEC00361CB5602B00DAE876 /* Bluetooth Party.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bluetooth Party.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEC00391CB5602B00DAE876 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BEC003B1CB5602B00DAE876 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -116,7 +114,6 @@
 			children = (
 				3B16D2EF1CBFF11600BE562C /* MatchmakingServer.swift */,
 				3B16D2F11CBFF12800BE562C /* MatchmakingClient.swift */,
-				3B16D2F71CC1587000BE562C /* MatchmakingManager.swift */,
 			);
 			name = Matchmaking;
 			sourceTree = "<group>";
@@ -346,7 +343,6 @@
 				3B16D2F01CBFF11600BE562C /* MatchmakingServer.swift in Sources */,
 				3B16D2F21CBFF12800BE562C /* MatchmakingClient.swift in Sources */,
 				3B16D2E21CBE9B1000BE562C /* RPSGame.swift in Sources */,
-				3B16D2F81CC1587000BE562C /* MatchmakingManager.swift in Sources */,
 				3BEC008E1CB6B6B900DAE876 /* Game.swift in Sources */,
 				3BEC00881CB6AFF900DAE876 /* PlayerListViewController.swift in Sources */,
 				3BEC003A1CB5602B00DAE876 /* AppDelegate.swift in Sources */,

@@ -35,6 +35,7 @@ class MatchmakingServer: NSObject {
         
         self.maxClients = maxClients
         
+        
         super.init()
         
         serviceAdvertiser.delegate = self
