@@ -10,7 +10,7 @@ import UIKit
 
 class Player: NSObject
 {
-    var playerName : String = ""
+    var playerName : String
     
     init(name : String)
     {

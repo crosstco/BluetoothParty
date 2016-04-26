@@ -24,7 +24,13 @@ class JoinWithNameViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
         let nextVC = segue.destinationViewController as! LobbyListViewController
-        nextVC.playerName = playerNameTextField.text!
+
+        if playerNameTextField.text == nil {
+            nextVC.playerName = UIDevice.currentDevice().name
+            
+        } else {
+            nextVC.playerName = playerNameTextField.text!
+        }
        
     }
 

@@ -10,12 +10,12 @@ import UIKit
 
 class GameViewController: UIViewController
 {
-    var players : [Player] = []
+    var game : Game = Game()
+    var lobbyTitle : String = ""
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
     }
 
 }

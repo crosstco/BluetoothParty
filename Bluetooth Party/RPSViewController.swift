@@ -43,16 +43,4 @@ class RPSViewController: UIViewController
         weaponString = scissText.text!
     }
     
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
-    {
-        let nextVC = segue.destinationViewController as! RPS2ViewController
-        nextVC.weaponString = weaponString
-        
-    }
-    
-    
-    
-    
-    
 }
