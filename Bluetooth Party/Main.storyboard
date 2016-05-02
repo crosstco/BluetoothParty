@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PdK-vG-SQM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PdK-vG-SQM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -214,17 +214,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lobby Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vsh-a2-YW8">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lobby Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vsh-a2-YW8">
                                 <rect key="frame" x="50" y="177" width="275" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your PlayerName" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1hX-z5-PcK">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your PlayerName" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1hX-z5-PcK">
                                 <rect key="frame" x="50" y="287" width="275" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ll8-0h-MUs">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ll8-0h-MUs">
                                 <rect key="frame" x="64" y="609" width="247" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Create Lobby">
@@ -240,7 +240,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="# of Players" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KeZ-dB-rOg">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="# of Players" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KeZ-dB-rOg">
                                 <rect key="frame" x="50" y="229" width="275" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -248,8 +248,14 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.59509655630000002" blue="0.78683298940000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Ll8-0h-MUs" firstAttribute="centerX" secondItem="Frk-RL-lqQ" secondAttribute="centerX" id="62e-Oz-0z6"/>
+                            <constraint firstItem="1hX-z5-PcK" firstAttribute="centerX" secondItem="Frk-RL-lqQ" secondAttribute="centerX" id="6aZ-xo-abS"/>
                             <constraint firstItem="uZv-EW-f8C" firstAttribute="leading" secondItem="Frk-RL-lqQ" secondAttribute="leadingMargin" constant="-20" id="H8T-2f-iKT"/>
+                            <constraint firstItem="KeZ-dB-rOg" firstAttribute="centerX" secondItem="Frk-RL-lqQ" secondAttribute="centerX" id="IcO-hi-923"/>
+                            <constraint firstItem="uZv-EW-f8C" firstAttribute="centerX" secondItem="Frk-RL-lqQ" secondAttribute="centerX" id="OF4-Qq-Eo5"/>
+                            <constraint firstItem="glS-8c-EPm" firstAttribute="top" secondItem="Ll8-0h-MUs" secondAttribute="bottom" constant="20" id="THt-I9-Gow"/>
                             <constraint firstItem="uZv-EW-f8C" firstAttribute="top" secondItem="4km-VH-ajd" secondAttribute="bottom" id="d1d-rv-bRO"/>
+                            <constraint firstItem="vsh-a2-YW8" firstAttribute="centerX" secondItem="Frk-RL-lqQ" secondAttribute="centerX" id="dEK-f2-pw3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="uZv-EW-f8C" secondAttribute="trailing" constant="-20" id="iH9-CK-bps"/>
                         </constraints>
                     </view>
@@ -619,7 +625,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Qvc-KZ-UVO"/>
+        <segue reference="XFL-NT-yu4"/>
         <segue reference="JCV-Vj-LmA"/>
     </inferredMetricsTieBreakers>
 </document>

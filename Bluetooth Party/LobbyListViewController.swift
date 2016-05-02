@@ -17,30 +17,41 @@ class LobbyListViewController: UIViewController, UITableViewDataSource, UITableV
    
     var playerName : String!
     
-    var matchmakingClient: MatchmakingClient!
+    var matchmakingClient: MatchmakingClient? = nil
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
         myTableView.dataSource = self
         myTableView.delegate = self
-        matchmakingClient.delegate = self
         
-        matchmakingClient = MatchmakingClient(myPeerID: MCPeerID(displayName: playerName))
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         
+        if(matchmakingClient == nil) {
+            matchmakingClient = MatchmakingClient(name: playerName)
+            matchmakingClient!.delegate = self
+            matchmakingClient!.startSearchingForServersWithSessionID("btp-game")
+            
+            myTableView.reloadData()
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return matchmakingClient.availableServerCount()
+        return matchmakingClient!.availableServerCount()
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let myCell = myTableView.dequeueReusableCellWithIdentifier("lobbyCell", forIndexPath: indexPath)
-        myCell.textLabel?.text = "Lobby Title"
-        lobbyTitle = (myCell.textLabel?.text)!
-        myCell.detailTextLabel?.text = "Game Type"
+        var myCell = myTableView.dequeueReusableCellWithIdentifier("lobbyCell", forIndexPath: indexPath)
+        
+        let peerID = matchmakingClient!.peerIDForAvailableServerAtIndex(indexPath.row)
+        
+        myCell.textLabel?.text = matchmakingClient!.displayNameForPeerID(peerID)
+        
         return myCell
     }
     

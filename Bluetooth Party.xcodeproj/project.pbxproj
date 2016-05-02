@@ -146,7 +146,6 @@
 				3B16D2E31CBE9B9700BE562C /* GameViewControllers */,
 				3BEC007E1CB6AF4500DAE876 /* Menus */,
 				3BEC008D1CB6B6B900DAE876 /* Game.swift */,
-				3F8158291CC7D7A600815111 /* Player.swift */,
 				3BEC00801CB6AF5300DAE876 /* Group */,
 				3BEC007F1CB6AF4F00DAE876 /* Dueling */,
 				3BEC00671CB5605500DAE876 /* Main.storyboard */,
@@ -346,7 +345,6 @@
 				3BEC008E1CB6B6B900DAE876 /* Game.swift in Sources */,
 				3BEC00881CB6AFF900DAE876 /* PlayerListViewController.swift in Sources */,
 				3BEC003A1CB5602B00DAE876 /* AppDelegate.swift in Sources */,
-				3FD66F3C1CC7D6CC007A85BC /* RPS2ViewController.swift in Sources */,
 				3BEC00841CB6AF7900DAE876 /* GameSettingsViewController.swift in Sources */,
 				3B16D2E71CBE9C6800BE562C /* RPSViewController.swift in Sources */,
 				3BEC008C1CB6B19300DAE876 /* GameViewController.swift in Sources */,
@@ -484,10 +482,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: ccross@bsd220.org (7VUX6PD5ZK)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Bluetooth Party/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.btpdt.Bluetooth-Party";
+				PRODUCT_BUNDLE_IDENTIFIER = com.btpdt.BluetoothParty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -495,10 +497,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: ccross@bsd220.org (7VUX6PD5ZK)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ccross@bsd220.org (7VUX6PD5ZK)";
 				INFOPLIST_FILE = "Bluetooth Party/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.btpdt.Bluetooth-Party";
+				PRODUCT_BUNDLE_IDENTIFIER = com.btpdt.BluetoothParty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

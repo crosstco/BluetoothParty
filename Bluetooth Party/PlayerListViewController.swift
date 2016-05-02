@@ -26,6 +26,20 @@ class PlayerListViewController: UIViewController, UITableViewDataSource, UITable
         myTableView.delegate = self
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if matchmakingServer == nil {
+            matchmakingServer = MatchmakingServer()
+            matchmakingServer?.maxClients = 3
+            matchmakingServer?.startAcceptingConnectionsForSessionID("btp-game")
+            
+            myTableView.reloadData()
+        }
+        
+        
+    }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let myCell = myTableView.dequeueReusableCellWithIdentifier("playerCell", forIndexPath: indexPath)
@@ -35,7 +49,7 @@ class PlayerListViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return matchmakingServer.connectedClientCount()
+        return  0 //matchmakingServer.connectedClientCount()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
@@ -46,3 +60,15 @@ class PlayerListViewController: UIViewController, UITableViewDataSource, UITable
     }
     
 }
+
+//extension PlayerListViewController: MatchmakingServerDelegate {
+//    
+//    func matchmakingServer(server: MatchmakingServer, clientDidConnect peerID: MCPeerID) {
+//        myTableView.reloadData()
+//    }
+//    
+//    func matchmakingServer(server: MatchmakingServer, clientDidDisconnect peerID: MCPeerID) {
+//        myTableView.reloadData()
+//    }
+//    
+//}
