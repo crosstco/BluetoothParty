@@ -493,10 +493,10 @@
             </objects>
             <point key="canvasLocation" x="-213.5" y="2186.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Mafia View Controller-->
         <scene sceneID="3M7-aw-GPw">
             <objects>
-                <viewController id="s1e-v6-zwT" sceneMemberID="viewController">
+                <viewController id="s1e-v6-zwT" customClass="MafiaViewController" customModule="Bluetooth_Party" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wSS-fd-sVW"/>
                         <viewControllerLayoutGuide type="bottom" id="hiD-Ie-uYY"/>
@@ -526,10 +526,10 @@
             </objects>
             <point key="canvasLocation" x="-213.5" y="2984.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Day View Controller-->
         <scene sceneID="5Dc-AB-RjP">
             <objects>
-                <viewController id="95g-Fk-NhP" sceneMemberID="viewController">
+                <viewController id="95g-Fk-NhP" customClass="DayViewController" customModule="Bluetooth_Party" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Bf6-oR-fCr"/>
                         <viewControllerLayoutGuide type="bottom" id="ZwU-rg-XIf"/>
@@ -538,7 +538,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DAY 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNO-OE-YXh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DAY #" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kNO-OE-YXh">
                                 <rect key="frame" x="0.0" y="225" width="375" height="217"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="140"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -559,10 +559,10 @@
             </objects>
             <point key="canvasLocation" x="364.5" y="2984.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Night View Controller-->
         <scene sceneID="eYd-iZ-NtL">
             <objects>
-                <viewController id="liZ-30-ffO" sceneMemberID="viewController">
+                <viewController id="liZ-30-ffO" customClass="NightViewController" customModule="Bluetooth_Party" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yU1-o9-oaB"/>
                         <viewControllerLayoutGuide type="bottom" id="yiY-1q-e7M"/>
@@ -571,7 +571,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NIGHT 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psZ-Dw-lpY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NIGHT #" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psZ-Dw-lpY">
                                 <rect key="frame" x="0.0" y="220" width="375" height="217"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -586,10 +586,10 @@
             </objects>
             <point key="canvasLocation" x="924.5" y="2984.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Charging View Controller-->
         <scene sceneID="wcN-CD-L2S">
             <objects>
-                <viewController id="ZNq-vJ-32v" sceneMemberID="viewController">
+                <viewController id="ZNq-vJ-32v" customClass="ChargingViewController" customModule="Bluetooth_Party" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="adZ-9b-YTU"/>
                         <viewControllerLayoutGuide type="bottom" id="m6G-tg-NjM"/>
@@ -641,12 +641,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tFn-4L-ZQc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-213.5" y="3792.5"/>
+            <point key="canvasLocation" x="364.5" y="3792.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Defense View Controller-->
         <scene sceneID="UEc-eC-hUz">
             <objects>
-                <viewController id="Oa9-l4-Jed" sceneMemberID="viewController">
+                <viewController id="Oa9-l4-Jed" customClass="DefenseViewController" customModule="Bluetooth_Party" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="F4c-gM-ovq"/>
                         <viewControllerLayoutGuide type="bottom" id="eu8-yH-VCb"/>
@@ -674,12 +674,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wdt-6Q-MqL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-213.5" y="4592.5"/>
+            <point key="canvasLocation" x="-213.5" y="3792.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Determine Guilt View Controller-->
         <scene sceneID="jE4-4g-07v">
             <objects>
-                <viewController id="YhK-4U-6kh" sceneMemberID="viewController">
+                <viewController id="YhK-4U-6kh" customClass="DetermineGuiltViewController" customModule="Bluetooth_Party" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yGj-On-xSf"/>
                         <viewControllerLayoutGuide type="bottom" id="W9n-gq-W90"/>
@@ -703,7 +703,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="64h-9H-IVf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="364.5" y="4592.5"/>
+            <point key="canvasLocation" x="-213.5" y="4592.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="BTj-ak-78r">
@@ -730,45 +730,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MaG-VH-Dg5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="924.5" y="4592.5"/>
+            <point key="canvasLocation" x="364.5" y="4592.5"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="2V0-RK-KbI">
-            <objects>
-                <viewController id="pQK-wV-xvm" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="5uC-Xg-08W"/>
-                        <viewControllerLayoutGuide type="bottom" id="2EX-hH-o7i"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fLm-oJ-ezV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DAY 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6l7-dm-OhQ">
-                                <rect key="frame" x="0.0" y="225" width="375" height="217"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="135"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="*timer*" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSi-vi-slt">
-                                <rect key="frame" x="264" y="20" width="111" height="47"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="U6K-Up-Cxy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="364.5" y="3792.5"/>
-        </scene>
-        <!--View Controller-->
+        <!--Kill View Controller-->
         <scene sceneID="FTs-KV-vaq">
             <objects>
-                <viewController id="fQS-5f-XLi" sceneMemberID="viewController">
+                <viewController id="fQS-5f-XLi" customClass="KillViewController" customModule="Bluetooth_Party" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tBB-dR-3oc"/>
                         <viewControllerLayoutGuide type="bottom" id="ZB2-Xc-Wh7"/>
