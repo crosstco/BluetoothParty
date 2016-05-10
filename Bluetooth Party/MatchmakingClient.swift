@@ -61,9 +61,8 @@ class MatchmakingClient: NSObject {
         clientState = .ClientStateConnecting
         let serverPeerID = peerID
         
-        
-        
-        //CONNECT TO SERVER HERE//////////////////////////////////////////
+        serviceBrowser.invitePeer(serverPeerID, toSession: session, withContext: nil, timeout: 10)
+
     }
     
     

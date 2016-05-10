@@ -10,6 +10,22 @@ import UIKit
 import GameKit
 import MultipeerConnectivity
 
+
+protocol MatchmakingServerDelegate {
+    
+    func matchmakingServer(server: MatchmakingServer, clientDidConnect peerID: MCPeerID)
+    func matchmakingServer(server: MatchmakingServer, clientDidDisconnect peerID: MCPeerID)
+}
+
+enum ServerState {
+    
+    case ServerStateIdle
+    case ServerStateAcceptingConnections
+    case ServerStateIgnoringConnections
+    
+}
+
+
 class MatchmakingServer: NSObject {
     
     var serverTitle : String
@@ -17,8 +33,12 @@ class MatchmakingServer: NSObject {
     var hostPeerID : MCPeerID
     
     var maxClients : Int
-    var connectedClients = []
+    var connectedClients: NSMutableArray
     var session : MCSession
+    
+    var serverState: ServerState
+    
+    var delegate: MatchmakingServerDelegate? = nil
     
     
     let serviceAdvertiser: MCNearbyServiceAdvertiser
@@ -35,6 +55,9 @@ class MatchmakingServer: NSObject {
         
         self.maxClients = maxClients
         
+        self.serverState = .ServerStateIdle
+        
+        self.connectedClients = NSMutableArray(capacity: maxClients)
         
         super.init()
         
@@ -52,37 +75,73 @@ class MatchmakingServer: NSObject {
     
     func startAcceptingConnectionForSessionID(sessionID: String) {
         
+        if serverState == .ServerStateIdle {
         connectedClients = NSMutableArray(capacity: maxClients)
         session.delegate = self
-        
+        }
+    }
+    
+    func connectedClientCount() -> Int {
+        return connectedClients.count
+    }
+    
+    func peerIDForConnectedClientAtIndex(index: Int) -> MCPeerID {
+        return connectedClients[index] as! MCPeerID
+    }
+    
+    func displayNameForPeerID(peerID: MCPeerID) -> String {
+        return peerID.displayName
     }
 }
+
 
     
     extension MatchmakingServer: MCSessionDelegate {
     
     func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
-        NSLog("%@", "didReceiveData: \(data)")
+
 
     }
     
     func session(session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, withProgress progress: NSProgress) {
-        NSLog("%@", "didFinishReceivingResourceWithName")
+
 
     }
     
     func session(session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, atURL localURL: NSURL, withError error: NSError?) {
-        NSLog("%@", "didFinishReceivingResourceWithName")
+
 
     }
     
     func session(session: MCSession, didReceiveStream stream: NSInputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
-        NSLog("%@", "didReceiveStream")
+
     }
     
     func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
-        NSLog("%@", "peer \(peerID) didChangeState: \(state)")
+        
+        if state == .Connected {
+        if serverState == .ServerStateAcceptingConnections {
+            if !connectedClients.containsObject(peerID) {
+                connectedClients.addObject(peerID)
+                self.delegate!.matchmakingServer(self, clientDidConnect: peerID)
+                
+            }
+            
+            }
+        }
+        
+        if state == .NotConnected {
+            if serverState != .ServerStateIdle {
+             
+                if connectedClients.containsObject(peerID) {
+                    connectedClients.removeObject(peerID)
+                    self.delegate!.matchmakingServer(self, clientDidDisconnect: peerID)
+                    
+                }
+                
+            }
     }
+}
 }
 
 
@@ -94,6 +153,9 @@ extension MatchmakingServer: MCNearbyServiceAdvertiserDelegate {
     }
     
     func advertiser(advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: NSData?, invitationHandler: (Bool, MCSession) -> Void) {
-        NSLog("%@", "didRecieveInformationFromPeer: \(peerID)")
+        
+        if (serverState == .ServerStateAcceptingConnections) && (connectedClientCount() < maxClients) {
+            invitationHandler(true, session)
+        }
     }
 }

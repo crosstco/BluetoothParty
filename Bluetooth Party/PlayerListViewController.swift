@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import MultipeerConnectivity
 
 class PlayerListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
-    
     @IBOutlet weak var myTableView: UITableView!
     
+    var playerName: String = ""
     var lobbyTitle : String = ""
     var game : Game = Game()
+    
+    var matchmakingServer: MatchmakingServer!
     
     override func viewDidLoad()
     {
@@ -32,7 +35,7 @@ class PlayerListViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return game.players.count
+        return matchmakingServer.connectedClientCount()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
