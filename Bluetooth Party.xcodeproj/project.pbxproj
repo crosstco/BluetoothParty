@@ -26,6 +26,15 @@
 		3BEC008A1CB6B16900DAE876 /* JoinWithNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC00891CB6B16900DAE876 /* JoinWithNameViewController.swift */; };
 		3BEC008C1CB6B19300DAE876 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC008B1CB6B19300DAE876 /* GameViewController.swift */; };
 		3BEC008E1CB6B6B900DAE876 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC008D1CB6B6B900DAE876 /* Game.swift */; };
+		3FCC9F711CE231290066CE57 /* MafiaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC9F701CE231290066CE57 /* MafiaViewController.swift */; };
+		3FCC9F731CE232730066CE57 /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC9F721CE232730066CE57 /* DayViewController.swift */; };
+		3FCC9F751CE232960066CE57 /* NightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC9F741CE232960066CE57 /* NightViewController.swift */; };
+		3FCC9F771CE232B60066CE57 /* DefenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC9F761CE232B60066CE57 /* DefenseViewController.swift */; };
+		3FCC9F791CE232FC0066CE57 /* ChargingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC9F781CE232FC0066CE57 /* ChargingViewController.swift */; };
+		3FCC9F7B1CE233290066CE57 /* KillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC9F7A1CE233290066CE57 /* KillViewController.swift */; };
+		3FCC9F7D1CE233620066CE57 /* DetermineGuiltViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC9F7C1CE233620066CE57 /* DetermineGuiltViewController.swift */; };
+		3FCC9F7F1CE2337E0066CE57 /* RevealRoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC9F7E1CE2337E0066CE57 /* RevealRoleViewController.swift */; };
+		3FCC9F821CE233BE0066CE57 /* MafiaGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC9F811CE233BE0066CE57 /* MafiaGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +80,15 @@
 		3BEC00891CB6B16900DAE876 /* JoinWithNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinWithNameViewController.swift; sourceTree = "<group>"; };
 		3BEC008B1CB6B19300DAE876 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		3BEC008D1CB6B6B900DAE876 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		3FCC9F701CE231290066CE57 /* MafiaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MafiaViewController.swift; sourceTree = "<group>"; };
+		3FCC9F721CE232730066CE57 /* DayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
+		3FCC9F741CE232960066CE57 /* NightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightViewController.swift; sourceTree = "<group>"; };
+		3FCC9F761CE232B60066CE57 /* DefenseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefenseViewController.swift; sourceTree = "<group>"; };
+		3FCC9F781CE232FC0066CE57 /* ChargingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargingViewController.swift; sourceTree = "<group>"; };
+		3FCC9F7A1CE233290066CE57 /* KillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KillViewController.swift; sourceTree = "<group>"; };
+		3FCC9F7C1CE233620066CE57 /* DetermineGuiltViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetermineGuiltViewController.swift; sourceTree = "<group>"; };
+		3FCC9F7E1CE2337E0066CE57 /* RevealRoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevealRoleViewController.swift; sourceTree = "<group>"; };
+		3FCC9F811CE233BE0066CE57 /* MafiaGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MafiaGame.swift; path = ../MafiaGame.swift; sourceTree = "<group>"; };
 		3FD66F3B1CC7D6CC007A85BC /* RPS2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPS2ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +123,7 @@
 			children = (
 				3B16D2E61CBE9C6800BE562C /* RPSViewController.swift */,
 				3FD66F3B1CC7D6CC007A85BC /* RPS2ViewController.swift */,
+				3FCC9F801CE2338B0066CE57 /* Mafia */,
 			);
 			name = GameViewControllers;
 			sourceTree = "<group>";
@@ -146,7 +165,6 @@
 				3B16D2E31CBE9B9700BE562C /* GameViewControllers */,
 				3BEC007E1CB6AF4500DAE876 /* Menus */,
 				3BEC008D1CB6B6B900DAE876 /* Game.swift */,
-				3F8158291CC7D7A600815111 /* Player.swift */,
 				3BEC00801CB6AF5300DAE876 /* Group */,
 				3BEC007F1CB6AF4F00DAE876 /* Dueling */,
 				3BEC00671CB5605500DAE876 /* Main.storyboard */,
@@ -201,8 +219,24 @@
 		3BEC00801CB6AF5300DAE876 /* Group */ = {
 			isa = PBXGroup;
 			children = (
+				3FCC9F811CE233BE0066CE57 /* MafiaGame.swift */,
 			);
 			name = Group;
+			sourceTree = "<group>";
+		};
+		3FCC9F801CE2338B0066CE57 /* Mafia */ = {
+			isa = PBXGroup;
+			children = (
+				3FCC9F701CE231290066CE57 /* MafiaViewController.swift */,
+				3FCC9F721CE232730066CE57 /* DayViewController.swift */,
+				3FCC9F741CE232960066CE57 /* NightViewController.swift */,
+				3FCC9F7A1CE233290066CE57 /* KillViewController.swift */,
+				3FCC9F781CE232FC0066CE57 /* ChargingViewController.swift */,
+				3FCC9F761CE232B60066CE57 /* DefenseViewController.swift */,
+				3FCC9F7C1CE233620066CE57 /* DetermineGuiltViewController.swift */,
+				3FCC9F7E1CE2337E0066CE57 /* RevealRoleViewController.swift */,
+			);
+			name = Mafia;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,17 +374,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BEC003C1CB5602B00DAE876 /* ViewController.swift in Sources */,
+				3FCC9F7B1CE233290066CE57 /* KillViewController.swift in Sources */,
 				3B16D2F01CBFF11600BE562C /* MatchmakingServer.swift in Sources */,
 				3B16D2F21CBFF12800BE562C /* MatchmakingClient.swift in Sources */,
+				3FCC9F791CE232FC0066CE57 /* ChargingViewController.swift in Sources */,
 				3B16D2E21CBE9B1000BE562C /* RPSGame.swift in Sources */,
+				3FCC9F7D1CE233620066CE57 /* DetermineGuiltViewController.swift in Sources */,
 				3BEC008E1CB6B6B900DAE876 /* Game.swift in Sources */,
+				3FCC9F711CE231290066CE57 /* MafiaViewController.swift in Sources */,
 				3BEC00881CB6AFF900DAE876 /* PlayerListViewController.swift in Sources */,
+				3FCC9F7F1CE2337E0066CE57 /* RevealRoleViewController.swift in Sources */,
 				3BEC003A1CB5602B00DAE876 /* AppDelegate.swift in Sources */,
-				3FD66F3C1CC7D6CC007A85BC /* RPS2ViewController.swift in Sources */,
 				3BEC00841CB6AF7900DAE876 /* GameSettingsViewController.swift in Sources */,
 				3B16D2E71CBE9C6800BE562C /* RPSViewController.swift in Sources */,
+				3FCC9F771CE232B60066CE57 /* DefenseViewController.swift in Sources */,
 				3BEC008C1CB6B19300DAE876 /* GameViewController.swift in Sources */,
+				3FCC9F731CE232730066CE57 /* DayViewController.swift in Sources */,
 				3BEC00861CB6AFE700DAE876 /* LobbyListViewController.swift in Sources */,
+				3FCC9F821CE233BE0066CE57 /* MafiaGame.swift in Sources */,
+				3FCC9F751CE232960066CE57 /* NightViewController.swift in Sources */,
 				3BEC00821CB6AF6800DAE876 /* GameSelectionViewController.swift in Sources */,
 				3BEC008A1CB6B16900DAE876 /* JoinWithNameViewController.swift in Sources */,
 			);
