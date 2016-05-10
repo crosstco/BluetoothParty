@@ -17,7 +17,8 @@ class GameSelectionViewController: UIViewController, UITabBarDelegate, UITableVi
     var groupGames : [Game] = []
 
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
