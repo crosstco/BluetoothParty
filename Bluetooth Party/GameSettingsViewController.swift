@@ -9,7 +9,7 @@
 import UIKit
 import MultipeerConnectivity
 
-class GameSettingsViewController: UIViewController
+class GameSettingsViewController: UIViewController, UITextFieldDelegate
 {
     @IBOutlet weak var lobbyTitleTextField: UITextField!
     @IBOutlet weak var numberOfPlayersTextField: UITextField!
@@ -20,6 +20,10 @@ class GameSettingsViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        lobbyTitleTextField.delegate = self
+        numberOfPlayersTextField.delegate = self
+        playerNameTextField.delegate = self
+        UITapGestureRecognizer(target: self.view, action: "dismissKeyboard")
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
@@ -29,5 +33,18 @@ class GameSettingsViewController: UIViewController
         let nextVC = segue.destinationViewController as! PlayerListViewController
         nextVC.lobbyTitle = lobbyTitleTextField.text!
         nextVC.game = game
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        lobbyTitleTextField.resignFirstResponder()
+        numberOfPlayersTextField.resignFirstResponder()
+        playerNameTextField.resignFirstResponder()
+        return false
+    }
+    
+    func dismissKeyboard() {
+        lobbyTitleTextField.resignFirstResponder()
+        numberOfPlayersTextField.resignFirstResponder()
+        playerNameTextField.resignFirstResponder()
     }
 }
