@@ -25,6 +25,19 @@ class GameSettingsViewController: UIViewController, UITextFieldDelegate
         playerNameTextField.delegate = self
         UITapGestureRecognizer(target: self.view, action: "dismissKeyboard")
     }
+    
+    func dismissKeyboard() {
+        lobbyTitleTextField.resignFirstResponder()
+        numberOfPlayersTextField.resignFirstResponder()
+        playerNameTextField.resignFirstResponder()
+    }
+    
+    override func resignFirstResponder() -> Bool {
+        return true
+    }
+    
+    
+
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
