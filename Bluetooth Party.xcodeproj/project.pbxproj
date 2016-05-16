@@ -125,7 +125,7 @@
 		3B16D2E31CBE9B9700BE562C /* GameViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				3FB553981CE385F900132769 /* RPS */,
+				3BD236791CEA1B1100AC6A1A /* RPS */,
 				3FCC9F801CE2338B0066CE57 /* Mafia */,
 			);
 			name = GameViewControllers;
