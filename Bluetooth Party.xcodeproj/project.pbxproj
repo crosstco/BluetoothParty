@@ -12,6 +12,8 @@
 		3B16D2F01CBFF11600BE562C /* MatchmakingServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16D2EF1CBFF11600BE562C /* MatchmakingServer.swift */; };
 		3B16D2F21CBFF12800BE562C /* MatchmakingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16D2F11CBFF12800BE562C /* MatchmakingClient.swift */; };
 		3B16D2F61CBFF2A900BE562C /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B16D2F51CBFF2A900BE562C /* MultipeerConnectivity.framework */; };
+		3BD236831CEA1BD800AC6A1A /* RPSReadyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD236821CEA1BD800AC6A1A /* RPSReadyViewController.swift */; };
+		3BD236851CEA1BED00AC6A1A /* RPSWinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD236841CEA1BED00AC6A1A /* RPSWinnerViewController.swift */; };
 		3BEC003A1CB5602B00DAE876 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC00391CB5602B00DAE876 /* AppDelegate.swift */; };
 		3BEC003C1CB5602B00DAE876 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC003B1CB5602B00DAE876 /* ViewController.swift */; };
 		3BEC00411CB5602B00DAE876 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEC00401CB5602B00DAE876 /* Assets.xcassets */; };
@@ -60,6 +62,8 @@
 		3B16D2EF1CBFF11600BE562C /* MatchmakingServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchmakingServer.swift; sourceTree = "<group>"; };
 		3B16D2F11CBFF12800BE562C /* MatchmakingClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchmakingClient.swift; sourceTree = "<group>"; };
 		3B16D2F51CBFF2A900BE562C /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
+		3BD236821CEA1BD800AC6A1A /* RPSReadyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPSReadyViewController.swift; sourceTree = "<group>"; };
+		3BD236841CEA1BED00AC6A1A /* RPSWinnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPSWinnerViewController.swift; sourceTree = "<group>"; };
 		3BEC00361CB5602B00DAE876 /* Bluetooth Party.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bluetooth Party.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEC00391CB5602B00DAE876 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BEC003B1CB5602B00DAE876 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -121,8 +125,7 @@
 		3B16D2E31CBE9B9700BE562C /* GameViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				3B16D2E61CBE9C6800BE562C /* RPSViewController.swift */,
-				3FD66F3B1CC7D6CC007A85BC /* RPS2ViewController.swift */,
+				3BD236791CEA1B1100AC6A1A /* RPS */,
 				3FCC9F801CE2338B0066CE57 /* Mafia */,
 			);
 			name = GameViewControllers;
@@ -135,6 +138,17 @@
 				3B16D2F11CBFF12800BE562C /* MatchmakingClient.swift */,
 			);
 			name = Matchmaking;
+			sourceTree = "<group>";
+		};
+		3BD236791CEA1B1100AC6A1A /* RPS */ = {
+			isa = PBXGroup;
+			children = (
+				3FD66F3B1CC7D6CC007A85BC /* RPS2ViewController.swift */,
+				3B16D2E61CBE9C6800BE562C /* RPSViewController.swift */,
+				3BD236821CEA1BD800AC6A1A /* RPSReadyViewController.swift */,
+				3BD236841CEA1BED00AC6A1A /* RPSWinnerViewController.swift */,
+			);
+			name = RPS;
 			sourceTree = "<group>";
 		};
 		3BEC002D1CB5602B00DAE876 = {
@@ -380,6 +394,7 @@
 				3FCC9F791CE232FC0066CE57 /* ChargingViewController.swift in Sources */,
 				3B16D2E21CBE9B1000BE562C /* RPSGame.swift in Sources */,
 				3FCC9F7D1CE233620066CE57 /* DetermineGuiltViewController.swift in Sources */,
+				3BD236851CEA1BED00AC6A1A /* RPSWinnerViewController.swift in Sources */,
 				3BEC008E1CB6B6B900DAE876 /* Game.swift in Sources */,
 				3FCC9F711CE231290066CE57 /* MafiaViewController.swift in Sources */,
 				3BEC00881CB6AFF900DAE876 /* PlayerListViewController.swift in Sources */,
@@ -391,6 +406,7 @@
 				3BEC008C1CB6B19300DAE876 /* GameViewController.swift in Sources */,
 				3FCC9F731CE232730066CE57 /* DayViewController.swift in Sources */,
 				3BEC00861CB6AFE700DAE876 /* LobbyListViewController.swift in Sources */,
+				3BD236831CEA1BD800AC6A1A /* RPSReadyViewController.swift in Sources */,
 				3FCC9F821CE233BE0066CE57 /* MafiaGame.swift in Sources */,
 				3FCC9F751CE232960066CE57 /* NightViewController.swift in Sources */,
 				3BEC00821CB6AF6800DAE876 /* GameSelectionViewController.swift in Sources */,
