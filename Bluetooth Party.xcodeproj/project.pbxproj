@@ -25,6 +25,7 @@
 		3BEC00881CB6AFF900DAE876 /* PlayerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC00871CB6AFF900DAE876 /* PlayerListViewController.swift */; };
 		3BEC008A1CB6B16900DAE876 /* JoinWithNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC00891CB6B16900DAE876 /* JoinWithNameViewController.swift */; };
 		3BEC008E1CB6B6B900DAE876 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEC008D1CB6B6B900DAE876 /* Game.swift */; };
+		3F4315B01CE974C400FB7FFA /* RPSCountdownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4315AF1CE974C400FB7FFA /* RPSCountdownViewController.swift */; };
 		3FCC9F711CE231290066CE57 /* MafiaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC9F701CE231290066CE57 /* MafiaViewController.swift */; };
 		3FCC9F731CE232730066CE57 /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC9F721CE232730066CE57 /* DayViewController.swift */; };
 		3FCC9F751CE232960066CE57 /* NightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCC9F741CE232960066CE57 /* NightViewController.swift */; };
@@ -78,6 +79,7 @@
 		3BEC00871CB6AFF900DAE876 /* PlayerListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerListViewController.swift; sourceTree = "<group>"; };
 		3BEC00891CB6B16900DAE876 /* JoinWithNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinWithNameViewController.swift; sourceTree = "<group>"; };
 		3BEC008D1CB6B6B900DAE876 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		3F4315AF1CE974C400FB7FFA /* RPSCountdownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPSCountdownViewController.swift; sourceTree = "<group>"; };
 		3FCC9F701CE231290066CE57 /* MafiaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MafiaViewController.swift; sourceTree = "<group>"; };
 		3FCC9F721CE232730066CE57 /* DayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
 		3FCC9F741CE232960066CE57 /* NightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightViewController.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 		3FB553981CE385F900132769 /* RPS */ = {
 			isa = PBXGroup;
 			children = (
+				3F4315AF1CE974C400FB7FFA /* RPSCountdownViewController.swift */,
 				3B16D2E61CBE9C6800BE562C /* RPSViewController.swift */,
 				3FD66F3B1CC7D6CC007A85BC /* RPS2ViewController.swift */,
 			);
@@ -390,6 +393,7 @@
 				3BEC00881CB6AFF900DAE876 /* PlayerListViewController.swift in Sources */,
 				3FCC9F7F1CE2337E0066CE57 /* RevealRoleViewController.swift in Sources */,
 				3BEC003A1CB5602B00DAE876 /* AppDelegate.swift in Sources */,
+				3F4315B01CE974C400FB7FFA /* RPSCountdownViewController.swift in Sources */,
 				3BEC00841CB6AF7900DAE876 /* GameSettingsViewController.swift in Sources */,
 				3B16D2E71CBE9C6800BE562C /* RPSViewController.swift in Sources */,
 				3FCC9F771CE232B60066CE57 /* DefenseViewController.swift in Sources */,

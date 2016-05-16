@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PdK-vG-SQM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PdK-vG-SQM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -360,6 +360,36 @@
             </objects>
             <point key="canvasLocation" x="665.5" y="1032.5"/>
         </scene>
+        <!--Countdown View Controller-->
+        <scene sceneID="rtb-8O-sUK">
+            <objects>
+                <viewController id="8jx-76-rCx" customClass="RPSCountdownViewController" customModule="Bluetooth_Party" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uqB-Su-fBb"/>
+                        <viewControllerLayoutGuide type="bottom" id="QOO-aa-2B7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XqG-in-Wpe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jE-12-2Gj">
+                                <rect key="frame" x="75" y="134" width="225" height="400"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="96"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="myLabel" destination="1jE-12-2Gj" id="4iA-Cx-xa5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HSf-iS-BTR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-674.5" y="2185.5"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="VeI-iE-Uno">
             <objects>
@@ -405,7 +435,6 @@
                                         <connections>
                                             <action selector="ifTapRock:" destination="IgD-bA-cH0" eventType="touchUpInside" id="eZQ-zU-fjI"/>
                                             <action selector="tapRock:" destination="IgD-bA-cH0" eventType="touchUpInside" id="ciX-Md-MF2"/>
-                                            <segue destination="q8T-rQ-gMF" kind="show" id="JCV-Vj-LmA"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="👊🏼" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3J-2S-WWj">
@@ -426,7 +455,6 @@
                                         <connections>
                                             <action selector="ifTapPaper:" destination="IgD-bA-cH0" eventType="touchUpInside" id="Hpe-R3-iVy"/>
                                             <action selector="tapPaper:" destination="IgD-bA-cH0" eventType="touchUpInside" id="Gbo-tC-SkV"/>
-                                            <segue destination="q8T-rQ-gMF" kind="show" id="5fr-aL-Qp6"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="🖐🏼" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1e-YT-PMn">
@@ -447,7 +475,6 @@
                                         <connections>
                                             <action selector="ifTapSciss:" destination="IgD-bA-cH0" eventType="touchUpInside" id="Quq-DM-4LB"/>
                                             <action selector="tapSciss:" destination="IgD-bA-cH0" eventType="touchUpInside" id="gDA-CG-18N"/>
-                                            <segue destination="q8T-rQ-gMF" kind="show" id="A9N-cu-cEt"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="✌🏼" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVZ-JL-QXa">
@@ -788,13 +815,13 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oO-aF-fRW">
-                                <rect key="frame" x="165" y="76" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Opponent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oO-aF-fRW">
+                                <rect key="frame" x="151" y="76" width="71" height="21"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Bold" family="Bodoni 72 Oldstyle" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CPU" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbS-BV-zHR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbS-BV-zHR">
                                 <rect key="frame" x="166" y="563" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Bold" family="Bodoni 72 Oldstyle" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -846,35 +873,17 @@
                     <navigationItem key="navigationItem" id="n52-kJ-XMB"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="cpuView" destination="DoA-HG-Kjv" id="DsZ-ep-guR"/>
-                        <outlet property="cpuWeapon" destination="HOC-AM-C57" id="V5P-AY-Dse"/>
+                        <outlet property="cpuView" destination="bhg-HB-Ltd" id="lHo-Mo-7TA"/>
+                        <outlet property="cpuWeapon" destination="0oO-aF-fRW" id="val-7B-pjd"/>
                         <outlet property="player2View" destination="DoA-HG-Kjv" id="sLV-Sm-zGM"/>
                         <outlet property="player2Weapon" destination="HOC-AM-C57" id="XhT-BE-EpQ"/>
-                        <outlet property="yourView" destination="92f-pC-Icz" id="Axp-Df-Rv3"/>
-                        <outlet property="yourWeapon" destination="bhg-HB-Ltd" id="MWb-um-C52"/>
+                        <outlet property="yourView" destination="HOC-AM-C57" id="Iyz-a7-4hW"/>
+                        <outlet property="yourWeapon" destination="dbS-BV-zHR" id="AcV-Wj-4xq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTi-IE-p60" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="364.5" y="2185.5"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="TU4-uU-SHS">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fSb-cC-BjD" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="i2i-nu-6zg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="IgD-bA-cH0" kind="relationship" relationship="rootViewController" id="SYy-JK-dhU"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uzY-Ef-l0x" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-800.5" y="2186.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lVn-sx-9B7">
@@ -895,7 +904,4 @@
             <point key="canvasLocation" x="-675" y="187"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="JCV-Vj-LmA"/>
-    </inferredMetricsTieBreakers>
 </document>
