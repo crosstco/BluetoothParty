@@ -113,9 +113,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="2QA-sp-f4P" kind="show" id="Qvc-KZ-UVO"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -914,8 +911,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="XFL-NT-yu4"/>
         <segue reference="JCV-Vj-LmA"/>
-        <segue reference="XFL-NT-yu4"/>
     </inferredMetricsTieBreakers>
 </document>

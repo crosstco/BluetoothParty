@@ -29,27 +29,56 @@ class PlayerListViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+        myTableView.delegate = self
+        myTableView.dataSource = self
+        
         if matchmakingServer == nil {
             matchmakingServer = MatchmakingServer()
+            matchmakingServer!.delegate = self
+            
             matchmakingServer?.maxClients = 3
             matchmakingServer?.startAcceptingConnectionsForSessionID("btp-game")
             
             myTableView.reloadData()
         }
         
-        
     }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        if matchmakingServer != nil {
+            
+            matchmakingServer?.endSession()
+            matchmakingServer = nil
+            
+        }
+}
+
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let myCell = myTableView.dequeueReusableCellWithIdentifier("playerCell", forIndexPath: indexPath)
-        myCell.textLabel?.text = game.players[indexPath.row]
-        return myCell
+        let cell = self.myTableView.dequeueReusableCellWithIdentifier("playerCell", forIndexPath: indexPath)
+        let peerID = matchmakingServer?.peerIDForConnectedClientAtIndex(indexPath.row)
+        
+        cell.textLabel?.text = matchmakingServer?.displayNameForPeerID(peerID!)
+        
+        return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return  0 //matchmakingServer.connectedClientCount()
+        if matchmakingServer != nil {
+            
+            return matchmakingServer!.connectedClientCount()
+            
+        } else {
+            return 0
+        }
+
+    }
+    
+    func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+        return nil
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
@@ -61,14 +90,24 @@ class PlayerListViewController: UIViewController, UITableViewDataSource, UITable
     
 }
 
-//extension PlayerListViewController: MatchmakingServerDelegate {
-//    
-//    func matchmakingServer(server: MatchmakingServer, clientDidConnect peerID: MCPeerID) {
-//        myTableView.reloadData()
-//    }
-//    
-//    func matchmakingServer(server: MatchmakingServer, clientDidDisconnect peerID: MCPeerID) {
-//        myTableView.reloadData()
-//    }
-//    
-//}
+extension PlayerListViewController: MatchmakingServerDelegate {
+    
+    func matchmakingServer(server: MatchmakingServer, clientDidConnect peerID: MCPeerID) {
+        
+        dispatch_async(dispatch_get_main_queue()) { 
+            self.myTableView.reloadData()
+        }
+    }
+    
+    func matchmakingServer(server: MatchmakingServer, clientDidDisconnect peerID: MCPeerID) {
+        
+        dispatch_async(dispatch_get_main_queue()) { 
+            self.myTableView.reloadData()
+        }
+    }
+    
+    func matchmakingServer(matchmakingServerSessionDidEnd server: MatchmakingServer) {
+        
+    }
+    
+}

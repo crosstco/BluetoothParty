@@ -22,6 +22,12 @@ class JoinWithNameViewController: UIViewController {
 
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        playerNameTextField.placeholder = UIDevice.currentDevice().name
+        
+    }
+    
     func dismissKeyboard() {
         playerNameTextField.resignFirstResponder()
     }
