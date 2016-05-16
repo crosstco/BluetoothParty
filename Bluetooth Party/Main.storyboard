@@ -54,14 +54,23 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H92-w7-o04">
+                                <rect key="frame" x="165" y="491" width="46" height="30"/>
+                                <state key="normal" title="Dev"/>
+                                <connections>
+                                    <segue destination="q4k-mw-NBj" kind="presentation" id="KFe-2i-My9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.59509655625474867" blue="0.78683298938679247" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="vWB-dg-2EH" firstAttribute="top" secondItem="DGx-bw-8Uo" secondAttribute="bottom" constant="62" id="0Rn-j5-MNF"/>
                             <constraint firstItem="Yg5-k7-gGA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1hz-lq-khI"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vWB-dg-2EH" secondAttribute="bottom" constant="226" id="942-Ck-S0f"/>
+                            <constraint firstItem="H92-w7-o04" firstAttribute="top" secondItem="vWB-dg-2EH" secondAttribute="bottom" constant="50" id="9EL-00-JC2"/>
                             <constraint firstItem="vWB-dg-2EH" firstAttribute="width" secondItem="DGx-bw-8Uo" secondAttribute="width" id="F2E-30-4sm"/>
                             <constraint firstItem="vWB-dg-2EH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L0X-ck-geR"/>
+                            <constraint firstItem="H92-w7-o04" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OGX-QR-LX3"/>
                             <constraint firstItem="vWB-dg-2EH" firstAttribute="height" secondItem="DGx-bw-8Uo" secondAttribute="height" id="SVJ-3U-SRt"/>
                             <constraint firstItem="DGx-bw-8Uo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aSw-ze-3BL"/>
                             <constraint firstItem="Yg5-k7-gGA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="zk3-C5-t7h"/>
@@ -279,12 +288,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter PlayerName" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jUi-ss-RJ5">
-                                <rect key="frame" x="100" y="319" width="174" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqd-RP-MuE">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqd-RP-MuE">
                                 <rect key="frame" x="64" y="597" width="247" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Join Game">
@@ -294,8 +298,19 @@
                                     <segue destination="wHr-XN-HWs" kind="show" id="YTd-WL-90k"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter PlayerName" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jUi-ss-RJ5">
+                                <rect key="frame" x="100" y="319" width="174" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.59509655630000002" blue="0.78683298940000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="jUi-ss-RJ5" firstAttribute="centerX" secondItem="9Zm-Vy-Kbb" secondAttribute="centerX" id="APc-ih-KIP"/>
+                            <constraint firstItem="yqd-RP-MuE" firstAttribute="centerX" secondItem="9Zm-Vy-Kbb" secondAttribute="centerX" id="bg4-Kr-HYo"/>
+                            <constraint firstItem="9jw-vt-4g5" firstAttribute="top" secondItem="yqd-RP-MuE" secondAttribute="bottom" constant="20" id="g6a-rQ-QD7"/>
+                            <constraint firstItem="jUi-ss-RJ5" firstAttribute="centerY" secondItem="9Zm-Vy-Kbb" secondAttribute="centerY" id="pnU-el-3Cd"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -419,6 +434,10 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="numberLabel" destination="Mxp-lo-7rr" id="ezn-xO-X2x"/>
+                        <segue destination="IgD-bA-cH0" kind="presentation" identifier="ReadyToRPS" id="dy0-IE-qoe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1on-fw-C6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -520,7 +539,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rnm-3D-ijo">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="rnm-3D-ijo">
                                 <rect key="frame" x="81" y="385" width="213" height="2"/>
                                 <color key="tintColor" red="1" green="0.11368428110000001" blue="0.15209883430000001" alpha="1" colorSpace="calibratedRGB"/>
                             </progressView>
@@ -534,6 +553,7 @@
                         <outlet property="rockText" destination="G3J-2S-WWj" id="YGs-mL-FGP"/>
                         <outlet property="scissText" destination="cVZ-JL-QXa" id="eyC-ST-Wqr"/>
                         <outlet property="timingBar" destination="rnm-3D-ijo" id="f47-qc-rFk"/>
+                        <segue destination="q8T-rQ-gMF" kind="presentation" identifier="RPSToResult" id="efV-Nf-h4j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Km0-aj-5PB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -895,12 +915,7 @@
                     <navigationItem key="navigationItem" id="n52-kJ-XMB"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="cpuView" destination="DoA-HG-Kjv" id="DsZ-ep-guR"/>
-                        <outlet property="cpuWeapon" destination="HOC-AM-C57" id="V5P-AY-Dse"/>
-                        <outlet property="player2View" destination="DoA-HG-Kjv" id="sLV-Sm-zGM"/>
-                        <outlet property="player2Weapon" destination="HOC-AM-C57" id="XhT-BE-EpQ"/>
-                        <outlet property="yourView" destination="92f-pC-Icz" id="Axp-Df-Rv3"/>
-                        <outlet property="yourWeapon" destination="bhg-HB-Ltd" id="MWb-um-C52"/>
+                        <segue destination="lSG-xk-d5T" kind="presentation" identifier="ResultToWinner" id="8fy-xO-pRZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTi-IE-p60" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -941,6 +956,10 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="winnerLabel" destination="bFx-Ec-07C" id="WYd-KS-LH8"/>
+                        <segue destination="q4k-mw-NBj" kind="presentation" identifier="WinnerToReady" id="l0i-8U-6j2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BB0-x9-eAZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -965,4 +984,7 @@
             <point key="canvasLocation" x="-675" y="187"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="l0i-8U-6j2"/>
+    </inferredMetricsTieBreakers>
 </document>

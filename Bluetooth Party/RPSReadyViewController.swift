@@ -11,12 +11,12 @@ import UIKit
 class RPSReadyViewController: UIViewController {
     
     
-    var
+    @IBOutlet weak var numberLabel: UILabel!
     
     
     var seconds = 3
     
-    
+    var timer: NSTimer!
     
     
     override func viewDidLoad() {
@@ -26,7 +26,24 @@ class RPSReadyViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "update", userInfo: nil, repeats: true)
         seconds = 3
+        numberLabel.text = "\(seconds)"
+    }
+    
+    func update() {
+        
+        seconds -= 1
+        
+        var num = max(seconds, 0)
+        numberLabel.text = "\(num)"
+        
+        if seconds <= 0 {
+            
+            performSegueWithIdentifier("ReadyToRPS", sender: nil)
+        
+        }
+        
     }
 
 }
