@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MultipeerConnectivity
 
 class GameSettingsViewController: UIViewController
 {
@@ -19,7 +20,22 @@ class GameSettingsViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
     }
+    
+    func dismissKeyboard() {
+        lobbyTitleTextField.resignFirstResponder()
+        numberOfPlayersTextField.resignFirstResponder()
+        playerNameTextField.resignFirstResponder()
+    }
+    
+    override func resignFirstResponder() -> Bool {
+        return true
+    }
+    
+    
+
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
@@ -29,4 +45,12 @@ class GameSettingsViewController: UIViewController
         nextVC.lobbyTitle = lobbyTitleTextField.text!
         nextVC.game = game
     }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        lobbyTitleTextField.resignFirstResponder()
+        numberOfPlayersTextField.resignFirstResponder()
+        playerNameTextField.resignFirstResponder()
+        return false
+    }
+    
 }

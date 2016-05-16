@@ -17,7 +17,23 @@ class JoinWithNameViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
 
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        playerNameTextField.placeholder = UIDevice.currentDevice().name
+        
+    }
+    
+    func dismissKeyboard() {
+        playerNameTextField.resignFirstResponder()
+    }
+    
+    override func resignFirstResponder() -> Bool {
+        return true
     }
     
     
