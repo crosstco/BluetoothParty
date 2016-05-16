@@ -18,6 +18,9 @@ class RPSViewController: UIViewController
     
     @IBOutlet weak var scissText: UILabel!
 
+    @IBOutlet weak var timingBar: UIProgressView!
+    
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()

@@ -390,6 +390,48 @@
             </objects>
             <point key="canvasLocation" x="-674.5" y="2185.5"/>
         </scene>
+        <!--Ready View Controller-->
+        <scene sceneID="R9i-W2-10R">
+            <objects>
+                <viewController id="q4k-mw-NBj" customClass="RPSReadyViewController" customModule="Bluetooth_Party" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ysU-Lm-yyi"/>
+                        <viewControllerLayoutGuide type="bottom" id="dCM-HA-yfW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6G9-6d-SjC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ready?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Itz-co-PPl">
+                                <rect key="frame" x="106" y="106" width="163" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mxp-lo-7rr">
+                                <rect key="frame" x="104" y="280" width="166" height="107"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="99y-Th-pBy"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="JA3-RZ-fd0"/>
+                                    <constraint firstAttribute="height" constant="107" id="WiP-Gx-48x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Itz-co-PPl" firstAttribute="centerX" secondItem="6G9-6d-SjC" secondAttribute="centerX" id="LcZ-hK-a8A"/>
+                            <constraint firstItem="Itz-co-PPl" firstAttribute="top" secondItem="ysU-Lm-yyi" secondAttribute="bottom" constant="90" id="haZ-kL-dMX"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1on-fw-C6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-767.5" y="2185.5"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="VeI-iE-Uno">
             <objects>
@@ -486,6 +528,10 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rnm-3D-ijo">
+                                <rect key="frame" x="81" y="385" width="213" height="2"/>
+                                <color key="tintColor" red="1" green="0.11368428110000001" blue="0.15209883430000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -495,6 +541,7 @@
                         <outlet property="paperText" destination="v1e-YT-PMn" id="Uok-6B-5zu"/>
                         <outlet property="rockText" destination="G3J-2S-WWj" id="YGs-mL-FGP"/>
                         <outlet property="scissText" destination="cVZ-JL-QXa" id="eyC-ST-Wqr"/>
+                        <outlet property="timingBar" destination="rnm-3D-ijo" id="f47-qc-rFk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Km0-aj-5PB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -857,16 +904,12 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMD-2f-6yY">
-                                <rect key="frame" x="130" y="628" width="114" height="31"/>
-                                <color key="backgroundColor" red="0.1058120202" green="0.078933500569999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Tap for Result">
-                                    <color key="titleColor" red="0.9057962437" green="0.9057962437" blue="0.9057962437" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="tapForResult:" destination="q8T-rQ-gMF" eventType="touchUpInside" id="T3w-9F-Pg2"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbS-BV-zHR">
+                                <rect key="frame" x="166" y="563" width="42" height="21"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Bold" family="Bodoni 72 Oldstyle" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
