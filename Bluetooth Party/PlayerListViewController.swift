@@ -38,11 +38,11 @@ class PlayerListViewController: UIViewController, UITableViewDataSource, UITable
         return matchmakingServer.connectedClientCount()
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
-    {
-        let nextVC = segue.destinationViewController as! GameViewController
-        nextVC.game = game
-        nextVC.lobbyTitle = lobbyTitle
-    }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+//    {
+//        let nextVC = segue.destinationViewController as! GameViewController
+//        nextVC.game = game
+//        nextVC.lobbyTitle = lobbyTitle
+//    }
     
 }

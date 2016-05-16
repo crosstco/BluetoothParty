@@ -8,6 +8,7 @@
 
 import UIKit
 
-class MafiaGame: NSObject {
-
+class MafiaGame: NSObject
+{
+    
 }

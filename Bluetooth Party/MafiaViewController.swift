@@ -8,28 +8,44 @@
 
 import UIKit
 
-class MafiaViewController: UIViewController {
-
-    override func viewDidLoad() {
+class MafiaViewController: UIViewController
+{
+    var players : [String] = ["","","",""]
+    var roles : [String] = ["","","",""]
+    var game : Game = Game()
+    var lobbyTitle : String = ""
+    
+    @IBOutlet weak var roleLabel: UILabel!
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        assignRoles()
+        roleLabel.text = roles [0] //change to each specific players roles
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func assignRoles()
+    {
+        var index = 0
+        while index < roles.count
+        {
+            roles[index] = "Civilian"
+            index += 1
+        }
+        var mafia = Double(players.count) * 0.2
+        var n : Double = 0.0
+        while n < mafia
+        {
+            var random = arc4random_uniform(UInt32(roles.count))
+            if (roles[Int(random)] == "Mafia")
+            {
+            }
+            else
+            {
+                roles[Int(random)] = "Mafia"
+                n += 1
+            }
+        }
     }
-    */
-
+    
 }
