@@ -115,6 +115,8 @@ extension MatchmakingClient: MCSessionDelegate {
     
     func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
         
+        if serverPeerID != nil && peerID == serverPeerID {
+        
         dispatch_async(dispatch_get_main_queue()) {
             
             print("host changed state")
@@ -135,10 +137,12 @@ extension MatchmakingClient: MCSessionDelegate {
                 if self.clientState == .Connected || self.clientState == .Connecting {
                     self.disconnectFromServer()
                 }
+                
                 break
                 
             default:
                 break
+            }
             }
         }
         

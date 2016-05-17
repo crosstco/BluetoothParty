@@ -55,6 +55,13 @@ class PlayerListViewController: UIViewController, UITableViewDataSource, UITable
 }
 
     
+    
+    func startGameWithBlock(game: (Game) -> ()) {
+        
+        
+    }
+    
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell = self.myTableView.dequeueReusableCellWithIdentifier("playerCell", forIndexPath: indexPath)
