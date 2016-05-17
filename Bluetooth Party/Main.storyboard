@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PdK-vG-SQM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PdK-vG-SQM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -54,14 +54,23 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H92-w7-o04">
+                                <rect key="frame" x="165" y="491" width="46" height="30"/>
+                                <state key="normal" title="Dev"/>
+                                <connections>
+                                    <segue destination="q4k-mw-NBj" kind="presentation" id="KFe-2i-My9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.59509655625474867" blue="0.78683298938679247" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="vWB-dg-2EH" firstAttribute="top" secondItem="DGx-bw-8Uo" secondAttribute="bottom" constant="62" id="0Rn-j5-MNF"/>
                             <constraint firstItem="Yg5-k7-gGA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1hz-lq-khI"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vWB-dg-2EH" secondAttribute="bottom" constant="226" id="942-Ck-S0f"/>
+                            <constraint firstItem="H92-w7-o04" firstAttribute="top" secondItem="vWB-dg-2EH" secondAttribute="bottom" constant="50" id="9EL-00-JC2"/>
                             <constraint firstItem="vWB-dg-2EH" firstAttribute="width" secondItem="DGx-bw-8Uo" secondAttribute="width" id="F2E-30-4sm"/>
                             <constraint firstItem="vWB-dg-2EH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L0X-ck-geR"/>
+                            <constraint firstItem="H92-w7-o04" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OGX-QR-LX3"/>
                             <constraint firstItem="vWB-dg-2EH" firstAttribute="height" secondItem="DGx-bw-8Uo" secondAttribute="height" id="SVJ-3U-SRt"/>
                             <constraint firstItem="DGx-bw-8Uo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aSw-ze-3BL"/>
                             <constraint firstItem="Yg5-k7-gGA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="zk3-C5-t7h"/>
@@ -279,12 +288,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter PlayerName" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jUi-ss-RJ5">
-                                <rect key="frame" x="100" y="319" width="174" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqd-RP-MuE">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqd-RP-MuE">
                                 <rect key="frame" x="64" y="597" width="247" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Join Game">
@@ -294,8 +298,19 @@
                                     <segue destination="wHr-XN-HWs" kind="show" id="YTd-WL-90k"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter PlayerName" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jUi-ss-RJ5">
+                                <rect key="frame" x="100" y="319" width="174" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.59509655630000002" blue="0.78683298940000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="jUi-ss-RJ5" firstAttribute="centerX" secondItem="9Zm-Vy-Kbb" secondAttribute="centerX" id="APc-ih-KIP"/>
+                            <constraint firstItem="yqd-RP-MuE" firstAttribute="centerX" secondItem="9Zm-Vy-Kbb" secondAttribute="centerX" id="bg4-Kr-HYo"/>
+                            <constraint firstItem="9jw-vt-4g5" firstAttribute="top" secondItem="yqd-RP-MuE" secondAttribute="bottom" constant="20" id="g6a-rQ-QD7"/>
+                            <constraint firstItem="jUi-ss-RJ5" firstAttribute="centerY" secondItem="9Zm-Vy-Kbb" secondAttribute="centerY" id="pnU-el-3Cd"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -360,35 +375,24 @@
             </objects>
             <point key="canvasLocation" x="665.5" y="1032.5"/>
         </scene>
-        <!--Countdown View Controller-->
-        <scene sceneID="rtb-8O-sUK">
+        <!--Game View Controller-->
+        <scene sceneID="PHT-68-tJ8">
             <objects>
-                <viewController id="8jx-76-rCx" customClass="RPSCountdownViewController" customModule="Bluetooth_Party" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Llh-vJ-U2c" customClass="GameViewController" customModule="Bluetooth_Party" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uqB-Su-fBb"/>
-                        <viewControllerLayoutGuide type="bottom" id="QOO-aa-2B7"/>
+                        <viewControllerLayoutGuide type="top" id="liE-xv-ZOg"/>
+                        <viewControllerLayoutGuide type="bottom" id="MHf-Ut-Ht5"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="XqG-in-Wpe">
+                    <view key="view" contentMode="scaleToFill" id="Sk7-Df-VHR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jE-12-2Gj">
-                                <rect key="frame" x="75" y="134" width="225" height="400"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="96"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.59509655630000002" blue="0.78683298940000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="myLabel" destination="1jE-12-2Gj" id="4iA-Cx-xa5"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HSf-iS-BTR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bBM-mh-plu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-674.5" y="2185.5"/>
+            <point key="canvasLocation" x="1411.5" y="1078.5"/>
         </scene>
         <!--Ready View Controller-->
         <scene sceneID="R9i-W2-10R">
@@ -427,6 +431,10 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="numberLabel" destination="Mxp-lo-7rr" id="ezn-xO-X2x"/>
+                        <segue destination="IgD-bA-cH0" kind="presentation" identifier="ReadyToRPS" id="dy0-IE-qoe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1on-fw-C6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -528,7 +536,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rnm-3D-ijo">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="rnm-3D-ijo">
                                 <rect key="frame" x="81" y="385" width="213" height="2"/>
                                 <color key="tintColor" red="1" green="0.11368428110000001" blue="0.15209883430000001" alpha="1" colorSpace="calibratedRGB"/>
                             </progressView>
@@ -542,6 +550,7 @@
                         <outlet property="rockText" destination="G3J-2S-WWj" id="YGs-mL-FGP"/>
                         <outlet property="scissText" destination="cVZ-JL-QXa" id="eyC-ST-Wqr"/>
                         <outlet property="timingBar" destination="rnm-3D-ijo" id="f47-qc-rFk"/>
+                        <segue destination="q8T-rQ-gMF" kind="presentation" identifier="RPSToResult" id="efV-Nf-h4j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Km0-aj-5PB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -576,9 +585,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="roleLabel" destination="1yR-HH-mUu" id="5ub-El-ELl"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pfe-vn-vI9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -612,10 +618,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="dayNumberLabel" destination="kNO-OE-YXh" id="7hU-Lk-fwz"/>
-                        <outlet property="timerLabel" destination="sv4-0o-eod" id="dSh-F7-Pup"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ya-3n-I5k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -868,12 +870,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbS-BV-zHR">
-                                <rect key="frame" x="166" y="563" width="42" height="21"/>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoOSITCTT-Bold" family="Bodoni 72 Oldstyle" pointSize="16"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="92f-pC-Icz">
                                 <rect key="frame" x="95" y="105" width="183" height="163"/>
                                 <subviews>
@@ -916,17 +912,55 @@
                     <navigationItem key="navigationItem" id="n52-kJ-XMB"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="cpuView" destination="bhg-HB-Ltd" id="lHo-Mo-7TA"/>
-                        <outlet property="cpuWeapon" destination="0oO-aF-fRW" id="val-7B-pjd"/>
-                        <outlet property="player2View" destination="DoA-HG-Kjv" id="sLV-Sm-zGM"/>
-                        <outlet property="player2Weapon" destination="HOC-AM-C57" id="XhT-BE-EpQ"/>
-                        <outlet property="yourView" destination="HOC-AM-C57" id="Iyz-a7-4hW"/>
-                        <outlet property="yourWeapon" destination="dbS-BV-zHR" id="AcV-Wj-4xq"/>
+                        <segue destination="lSG-xk-d5T" kind="presentation" identifier="ResultToWinner" id="8fy-xO-pRZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTi-IE-p60" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="364.5" y="2185.5"/>
+        </scene>
+        <!--Winner View Controller-->
+        <scene sceneID="mVs-nm-bvp">
+            <objects>
+                <viewController id="lSG-xk-d5T" customClass="RPSWinnerViewController" customModule="Bluetooth_Party" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hAH-1h-MmZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="lgW-23-iR0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ab9-WN-2f7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="[PlayerName]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFx-Ec-07C">
+                                <rect key="frame" x="78" y="303" width="218" height="62"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Wins!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8q-ow-b6W">
+                                <rect key="frame" x="78" y="373" width="218" height="62"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="i8q-ow-b6W" firstAttribute="top" secondItem="bFx-Ec-07C" secondAttribute="bottom" constant="5" id="EJb-Jf-mhc"/>
+                            <constraint firstItem="bFx-Ec-07C" firstAttribute="centerX" secondItem="Ab9-WN-2f7" secondAttribute="centerX" id="TLn-y4-p5M"/>
+                            <constraint firstItem="bFx-Ec-07C" firstAttribute="centerY" secondItem="Ab9-WN-2f7" secondAttribute="centerY" id="W10-1s-0Gi"/>
+                            <constraint firstItem="i8q-ow-b6W" firstAttribute="centerX" secondItem="Ab9-WN-2f7" secondAttribute="centerX" id="h5i-RJ-IWm"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="winnerLabel" destination="bFx-Ec-07C" id="WYd-KS-LH8"/>
+                        <segue destination="q4k-mw-NBj" kind="presentation" identifier="WinnerToReady" id="l0i-8U-6j2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BB0-x9-eAZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886.5" y="2186.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lVn-sx-9B7">
@@ -947,4 +981,7 @@
             <point key="canvasLocation" x="-675" y="187"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="l0i-8U-6j2"/>
+    </inferredMetricsTieBreakers>
 </document>

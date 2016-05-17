@@ -55,6 +55,13 @@ class PlayerListViewController: UIViewController, UITableViewDataSource, UITable
 }
 
     
+    
+    func startGameWithBlock(game: (Game) -> ()) {
+        
+        
+    }
+    
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell = self.myTableView.dequeueReusableCellWithIdentifier("playerCell", forIndexPath: indexPath)
@@ -83,9 +90,9 @@ class PlayerListViewController: UIViewController, UITableViewDataSource, UITable
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-        let nextVC = segue.destinationViewController as! GameViewController
-        nextVC.game = game
-        nextVC.lobbyTitle = lobbyTitle
+//        let nextVC = segue.destinationViewController as! GameViewController
+//        nextVC.game = game
+//        nextVC.lobbyTitle = lobbyTitle
     }
     
 }
