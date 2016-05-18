@@ -127,6 +127,7 @@ extension MatchmakingClient: MCSessionDelegate {
                 if self.clientState == .Connecting {
                     self.clientState = .Connected
                     self.delegate?.matchmakingClient(self, didConnectToServer: peerID)
+                    
                 }
                 break
                 

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MultipeerConnectivity
 
 class RPSViewController: UIViewController
 {
@@ -63,6 +64,13 @@ class RPSViewController: UIViewController
         
         VC.weaponString = self.weaponString
         VC.game = game
+        let data = weaponString.dataUsingEncoding(NSUTF8StringEncoding)
+        let peers: [MCPeerID] = [game.other!]
+        
+        do {
+        try game.session.sendData(data!, toPeers: peers, withMode: MCSessionSendDataMode.Reliable)
+        } catch {
+        }
         
     }
     

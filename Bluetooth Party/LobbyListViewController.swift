@@ -126,10 +126,18 @@ class LobbyListViewController: UIViewController, UITableViewDataSource, UITableV
     
     func matchmakingClient(client: MatchmakingClient, didConnectToServer peerID: MCPeerID) {
         
+        performSegueWithIdentifier("lobbyToReady", sender: nil)
+        
     }
     
-
-
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let nextVC = segue.destinationViewController as! RPSReadyViewController
+        
+        var game = Game()
+        game.startClientGameWithSession((matchmakingClient?.session)!, playerName: UIDevice.currentDevice().name, serverPeerID: (matchmakingClient?.serverPeerID)!)
+        
+    }
 }
 
 extension LobbyListViewController: LobbyListViewControllerDelegate {

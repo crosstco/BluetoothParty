@@ -132,7 +132,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="myTableView" destination="jZG-yp-rsa" id="zbV-xP-6K0"/>
-                        <segue destination="q4k-mw-NBj" kind="presentation" id="EqV-K0-1Wf"/>
+                        <segue destination="q4k-mw-NBj" kind="presentation" identifier="lobbyToReady" id="EqV-K0-1Wf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kqL-9I-fTh" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -377,7 +377,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="myTableView" destination="1Vm-8F-l7i" id="9xq-zS-NNR"/>
-                        <segue destination="q4k-mw-NBj" kind="presentation" id="gcf-1b-T8k"/>
+                        <segue destination="q4k-mw-NBj" kind="presentation" identifier="playerToReady" id="gcf-1b-T8k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dgU-eI-T7V" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -447,7 +447,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1on-fw-C6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="106.5" y="1032.5"/>
+            <point key="canvasLocation" x="88.5" y="1342.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="VeI-iE-Uno">
@@ -992,6 +992,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="EqV-K0-1Wf"/>
+        <segue reference="gcf-1b-T8k"/>
     </inferredMetricsTieBreakers>
 </document>

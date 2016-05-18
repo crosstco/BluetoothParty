@@ -36,11 +36,30 @@ class RPS2ViewController: UIViewController
         seconds = 2
         
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "update", userInfo: nil, repeats: true)
-        
-        playerLabel.text = weaponString
-        opponentLabel.text = opponentWeaponString
-    }
     
+        opponentWeaponString = String(data: game.data!, encoding: NSUTF8StringEncoding)!
+        
+            if weaponString == "rock" {
+                playerLabel.text = "👊🏼"
+            }
+            else if weaponString == "paper" {
+                playerLabel.text = "✋🏼"
+            }
+            else {
+            playerLabel.text = "✌🏼"
+            }
+        
+        if opponentWeaponString == "rock" {
+            playerLabel.text = "👊🏼"
+        }
+        else if opponentWeaponString == "paper" {
+            playerLabel.text = "✋🏼"
+        }
+        else {
+            playerLabel.text = "✌🏼"
+        }
+        
+}
     
 
     func update() {
