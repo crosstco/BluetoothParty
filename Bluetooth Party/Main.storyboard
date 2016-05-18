@@ -132,11 +132,12 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="myTableView" destination="jZG-yp-rsa" id="zbV-xP-6K0"/>
+                        <segue destination="q4k-mw-NBj" kind="presentation" id="EqV-K0-1Wf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kqL-9I-fTh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9.5" y="1032.5"/>
+            <point key="canvasLocation" x="-480.5" y="1020.5"/>
         </scene>
         <!--Game Selection View Controller-->
         <scene sceneID="EYg-UT-CdX">
@@ -319,7 +320,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7IB-0b-k57" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-548.5" y="1032.5"/>
+            <point key="canvasLocation" x="-1024.5" y="1020.5"/>
         </scene>
         <!--Player List View Controller-->
         <scene sceneID="ZFk-7M-op7">
@@ -376,6 +377,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="myTableView" destination="1Vm-8F-l7i" id="9xq-zS-NNR"/>
+                        <segue destination="q4k-mw-NBj" kind="presentation" id="gcf-1b-T8k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dgU-eI-T7V" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -445,7 +447,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1on-fw-C6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-767.5" y="2185.5"/>
+            <point key="canvasLocation" x="106.5" y="1032.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="VeI-iE-Uno">
@@ -559,7 +561,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Km0-aj-5PB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-213.5" y="2186.5"/>
+            <point key="canvasLocation" x="-201.5" y="2602.5"/>
         </scene>
         <!--Mafia View Controller-->
         <scene sceneID="3M7-aw-GPw">
@@ -990,6 +992,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="l0i-8U-6j2"/>
+        <segue reference="EqV-K0-1Wf"/>
     </inferredMetricsTieBreakers>
 </document>
