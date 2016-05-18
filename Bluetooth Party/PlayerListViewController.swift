@@ -95,9 +95,8 @@ class PlayerListViewController: UIViewController, UITableViewDataSource, UITable
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-//        let nextVC = segue.destinationViewController as! GameViewController
-//        nextVC.game = game
-//        nextVC.lobbyTitle = lobbyTitle
+        let nextVC = segue.destinationViewController as! RPSReadyViewController
+            nextVC.lobbyTitle = lobbyTitle
     }
     
 }
@@ -108,6 +107,8 @@ extension PlayerListViewController: MatchmakingServerDelegate {
         
         dispatch_async(dispatch_get_main_queue()) { 
             self.myTableView.reloadData()
+            
+            
         }
     }
     
