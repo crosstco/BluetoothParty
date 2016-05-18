@@ -23,7 +23,7 @@ class RPSWinnerViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("update"), userInfo: nil, repeats: false)
+        timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "update", userInfo: nil, repeats: false)
         if winner == "Tie"
         {
             winnerLabel.text = "Tie :|"

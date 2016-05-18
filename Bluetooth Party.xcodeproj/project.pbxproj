@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B16D2E21CBE9B1000BE562C /* RPSGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16D2E11CBE9B1000BE562C /* RPSGame.swift */; };
 		3B16D2E71CBE9C6800BE562C /* RPSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16D2E61CBE9C6800BE562C /* RPSViewController.swift */; };
 		3B16D2F01CBFF11600BE562C /* MatchmakingServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16D2EF1CBFF11600BE562C /* MatchmakingServer.swift */; };
 		3B16D2F21CBFF12800BE562C /* MatchmakingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16D2F11CBFF12800BE562C /* MatchmakingClient.swift */; };
@@ -58,7 +57,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3B16D2E11CBE9B1000BE562C /* RPSGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPSGame.swift; sourceTree = "<group>"; };
 		3B16D2E61CBE9C6800BE562C /* RPSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPSViewController.swift; sourceTree = "<group>"; };
 		3B16D2EF1CBFF11600BE562C /* MatchmakingServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchmakingServer.swift; sourceTree = "<group>"; };
 		3B16D2F11CBFF12800BE562C /* MatchmakingClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchmakingClient.swift; sourceTree = "<group>"; };
@@ -226,7 +224,6 @@
 		3BEC007F1CB6AF4F00DAE876 /* Dueling */ = {
 			isa = PBXGroup;
 			children = (
-				3B16D2E11CBE9B1000BE562C /* RPSGame.swift */,
 			);
 			name = Dueling;
 			sourceTree = "<group>";
@@ -393,7 +390,6 @@
 				3B16D2F01CBFF11600BE562C /* MatchmakingServer.swift in Sources */,
 				3B16D2F21CBFF12800BE562C /* MatchmakingClient.swift in Sources */,
 				3FCC9F791CE232FC0066CE57 /* ChargingViewController.swift in Sources */,
-				3B16D2E21CBE9B1000BE562C /* RPSGame.swift in Sources */,
 				3FCC9F7D1CE233620066CE57 /* DetermineGuiltViewController.swift in Sources */,
 				3BD236851CEA1BED00AC6A1A /* RPSWinnerViewController.swift in Sources */,
 				3BD1D8F01CEA72EB0066AEFA /* RPS2ViewController.swift in Sources */,
