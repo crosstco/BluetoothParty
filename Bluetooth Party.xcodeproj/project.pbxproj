@@ -12,6 +12,7 @@
 		3B16D2F01CBFF11600BE562C /* MatchmakingServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16D2EF1CBFF11600BE562C /* MatchmakingServer.swift */; };
 		3B16D2F21CBFF12800BE562C /* MatchmakingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B16D2F11CBFF12800BE562C /* MatchmakingClient.swift */; };
 		3B16D2F61CBFF2A900BE562C /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B16D2F51CBFF2A900BE562C /* MultipeerConnectivity.framework */; };
+		3BB376131CEBF0F9005F4E4E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB376121CEBF0F9005F4E4E /* Player.swift */; };
 		3BD1D8F01CEA72EB0066AEFA /* RPS2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD1D8EF1CEA72EB0066AEFA /* RPS2ViewController.swift */; };
 		3BD236831CEA1BD800AC6A1A /* RPSReadyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD236821CEA1BD800AC6A1A /* RPSReadyViewController.swift */; };
 		3BD236851CEA1BED00AC6A1A /* RPSWinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD236841CEA1BED00AC6A1A /* RPSWinnerViewController.swift */; };
@@ -62,6 +63,7 @@
 		3B16D2EF1CBFF11600BE562C /* MatchmakingServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchmakingServer.swift; sourceTree = "<group>"; };
 		3B16D2F11CBFF12800BE562C /* MatchmakingClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchmakingClient.swift; sourceTree = "<group>"; };
 		3B16D2F51CBFF2A900BE562C /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
+		3BB376121CEBF0F9005F4E4E /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Player.swift; path = ../Player.swift; sourceTree = "<group>"; };
 		3BD1D8EF1CEA72EB0066AEFA /* RPS2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RPS2ViewController.swift; path = ../RPS2ViewController.swift; sourceTree = "<group>"; };
 		3BD236821CEA1BD800AC6A1A /* RPSReadyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPSReadyViewController.swift; sourceTree = "<group>"; };
 		3BD236841CEA1BED00AC6A1A /* RPSWinnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPSWinnerViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				3B16D2E31CBE9B9700BE562C /* GameViewControllers */,
 				3BEC007E1CB6AF4500DAE876 /* Menus */,
 				3BEC008D1CB6B6B900DAE876 /* Game.swift */,
+				3BB376121CEBF0F9005F4E4E /* Player.swift */,
 				3BEC00801CB6AF5300DAE876 /* Group */,
 				3BEC007F1CB6AF4F00DAE876 /* Dueling */,
 				3BEC00671CB5605500DAE876 /* Main.storyboard */,
@@ -403,6 +406,7 @@
 				3B16D2E71CBE9C6800BE562C /* RPSViewController.swift in Sources */,
 				3FCC9F771CE232B60066CE57 /* DefenseViewController.swift in Sources */,
 				3FCC9F731CE232730066CE57 /* DayViewController.swift in Sources */,
+				3BB376131CEBF0F9005F4E4E /* Player.swift in Sources */,
 				3BEC00861CB6AFE700DAE876 /* LobbyListViewController.swift in Sources */,
 				3BD236831CEA1BD800AC6A1A /* RPSReadyViewController.swift in Sources */,
 				3FCC9F821CE233BE0066CE57 /* MafiaGame.swift in Sources */,

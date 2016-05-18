@@ -7,29 +7,126 @@
 //
 
 import UIKit
+import MultipeerConnectivity
+
+enum GameState {
+    
+    case WaitingForSignIn
+    case WaitingForReady
+    case Playing
+    case GameOver
+    case Quitting
+    
+}
+
+
+protocol GameDelegate {
+    
+    func game(gameWaitingForServerReady game: Game)
+}
 
 class Game: NSObject {
     
-    var name : String
-    var numPlayers : Int
-    var viewController : UIViewController
-    var players : [String] = []
+    
+    var delegate: GameDelegate? = nil
+    var isServer: Bool!
+    
+    var gameState: GameState!
+    var session: MCSession!
+    var serverPeerID: MCPeerID!
+    var localPlayerName: NSString!
     
     
-    init(name : String, numPlayers : Int, viewController : UIViewController, players : [String])
-    {
+    var players: NSMutableDictionary!
+    
+    override init() {
+        super.init()
         
-        self.name = name
-        self.numPlayers = numPlayers
-        self.viewController = viewController
+        players = NSMutableDictionary(capacity: 2)
+        
     }
     
-    override init()
-    {
-        self.name = ""
-        self.numPlayers = 0
-        players = []
-        viewController = UIViewController()
+    
+    func startClientGameWithSession(session: MCSession, playerName: NSString, serverPeerID: MCPeerID) {
+        self.isServer = false
+        self.session = session
+        self.session.delegate = self
+        
+        self.serverPeerID = serverPeerID
+        self.localPlayerName = playerName
+        
+        self.gameState = .WaitingForSignIn
+        
+        self.delegate?.game(gameWaitingForServerReady: self)
     }
+    
+    func startServerGameWithSession(session: MCSession, playerName: NSString, serverPeerID: MCPeerID) {
+        self.isServer = true
+        self.session = session
+        self.session.delegate = self
+        
+        self.serverPeerID = serverPeerID
+        self.localPlayerName = playerName
+        
+        self.gameState = .WaitingForSignIn
+        
+        self.delegate?.game(gameWaitingForServerReady: self)
+        
+        
+        
+        var player = Player()
+        player.name = playerName
+        player.peerID = serverPeerID
+        players.setObject(player, forKey: player.peerID)
+        
 
+        
+        
+        
+        
+        
+    }
+    
+    func quitGameWithReason(reason: QuitReason) {
+        
+    }
+    
+    
+}
+
+
+extension Game: GameDelegate{
+    
+    func game(gameWaitingForServerReady game: Game) {
+        
+    }
+}
+
+
+
+extension Game: MCSessionDelegate {
+    
+    func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
+        
+    }
+    
+    func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
+        
+    }
+    
+    func session(session: MCSession, didReceiveStream stream: NSInputStream, withName streamName: String, fromPeer peerID: MCPeerID) {
+        
+    }
+    
+    func session(session: MCSession, didStartReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, withProgress progress: NSProgress) {
+        
+    }
+    
+    func session(session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, atURL localURL: NSURL, withError error: NSError?) {
+        
+    }
+    
+    
+    
+    
 }

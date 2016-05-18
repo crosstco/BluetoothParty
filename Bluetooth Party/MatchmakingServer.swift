@@ -76,6 +76,11 @@ class MatchmakingServer: NSObject {
         
     }
     
+    func stopAcceptingConnections() {
+        serverState = .IgnoringNewConnections
+        serviceAdvertiser?.stopAdvertisingPeer()
+    }
+    
     
     func clientsConnected() -> NSArray {
         return connectedClients

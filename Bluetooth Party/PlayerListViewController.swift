@@ -55,11 +55,16 @@ class PlayerListViewController: UIViewController, UITableViewDataSource, UITable
 }
 
     
-    
-    func startGameWithBlock(game: (Game) -> ()) {
+    @IBAction func startGameAction(sender: AnyObject) {
         
+        if matchmakingServer != nil && matchmakingServer.connectedClientCount() > 0 {
+            
+            matchmakingServer.stopAcceptingConnections()
+            
+        }
         
     }
+    
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
