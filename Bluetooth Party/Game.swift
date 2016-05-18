@@ -33,11 +33,12 @@ class Game: NSObject {
     
     var gameState: GameState!
     var session: MCSession!
-    var serverPeerID: MCPeerID!
+    var serverPeerID: MCPeerID? = nil
     var localPlayerName: NSString!
     
     var data: String? = nil
     
+    var other: MCPeerID!
     
     var players: NSMutableDictionary!
     
@@ -57,35 +58,32 @@ class Game: NSObject {
         self.serverPeerID = serverPeerID
         self.localPlayerName = playerName
         
+        self.other = serverPeerID
+        
         self.gameState = .WaitingForSignIn
         
         self.delegate?.game(gameWaitingForServerReady: self)
     }
     
-    func startServerGameWithSession(session: MCSession, playerName: NSString, serverPeerID: MCPeerID) {
+    func startServerGameWithSession(session: MCSession, playerName: NSString, client: MCPeerID) {
         self.isServer = true
         self.session = session
         self.session.delegate = self
         
-        self.serverPeerID = serverPeerID
+        self.other = client
         self.localPlayerName = playerName
+        
         
         self.gameState = .WaitingForSignIn
         
         self.delegate?.game(gameWaitingForServerReady: self)
-        
+    
         
         
         var player = Player()
         player.name = playerName
         player.peerID = serverPeerID
         players.setObject(player, forKey: player.peerID)
-        
-
-        
-        
-        
-        
         
     }
     
@@ -109,6 +107,7 @@ extension Game: GameDelegate{
 extension Game: MCSessionDelegate {
     
     func session(session: MCSession, peer peerID: MCPeerID, didChangeState state: MCSessionState) {
+        
         
     }
     

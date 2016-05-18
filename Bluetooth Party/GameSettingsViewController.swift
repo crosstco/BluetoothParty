@@ -39,8 +39,8 @@ class GameSettingsViewController: UIViewController
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-        game.numPlayers = (numberOfPlayersTextField.text! as NSString).integerValue
-        game.players.append(playerNameTextField.text!)
+        //game.numPlayers = (numberOfPlayersTextField.text! as NSString).integerValue
+        //game.players.append(playerNameTextField.text!)
         let nextVC = segue.destinationViewController as! PlayerListViewController
         nextVC.lobbyTitle = lobbyTitleTextField.text!
         nextVC.game = game
