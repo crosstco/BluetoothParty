@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PdK-vG-SQM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PdK-vG-SQM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -483,8 +483,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="103" height="141"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="69"/>
                                         <connections>
-                                            <action selector="ifTapRock:" destination="IgD-bA-cH0" eventType="touchUpInside" id="eZQ-zU-fjI"/>
-                                            <action selector="tapRock:" destination="IgD-bA-cH0" eventType="touchUpInside" id="ciX-Md-MF2"/>
+                                            <action selector="tapRock:" destination="IgD-bA-cH0" eventType="touchUpInside" id="PFh-tW-hsE"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="👊🏼" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3J-2S-WWj">
@@ -503,8 +502,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="103" height="141"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                         <connections>
-                                            <action selector="ifTapPaper:" destination="IgD-bA-cH0" eventType="touchUpInside" id="Hpe-R3-iVy"/>
-                                            <action selector="tapPaper:" destination="IgD-bA-cH0" eventType="touchUpInside" id="Gbo-tC-SkV"/>
+                                            <action selector="tapPaper:" destination="IgD-bA-cH0" eventType="touchUpInside" id="u0P-tX-Sxy"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="🖐🏼" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v1e-YT-PMn">
@@ -523,12 +521,11 @@
                                         <rect key="frame" x="0.0" y="0.0" width="103" height="141"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                         <connections>
-                                            <action selector="ifTapSciss:" destination="IgD-bA-cH0" eventType="touchUpInside" id="Quq-DM-4LB"/>
-                                            <action selector="tapSciss:" destination="IgD-bA-cH0" eventType="touchUpInside" id="gDA-CG-18N"/>
+                                            <action selector="tapSciss:" destination="IgD-bA-cH0" eventType="touchUpInside" id="AsA-ZQ-Gzl"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="✌🏼" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVZ-JL-QXa">
-                                        <rect key="frame" x="0.0" y="0.0" width="103" height="141"/>
+                                        <rect key="frame" x="0.0" y="-3" width="103" height="141"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="103"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -546,9 +543,9 @@
                     <navigationItem key="navigationItem" id="jBc-lK-d4l"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="paperText" destination="v1e-YT-PMn" id="Uok-6B-5zu"/>
-                        <outlet property="rockText" destination="G3J-2S-WWj" id="YGs-mL-FGP"/>
-                        <outlet property="scissText" destination="cVZ-JL-QXa" id="eyC-ST-Wqr"/>
+                        <outlet property="paperLabel" destination="v1e-YT-PMn" id="VwJ-HA-VrO"/>
+                        <outlet property="rockLabel" destination="G3J-2S-WWj" id="o9j-Gp-3MY"/>
+                        <outlet property="scissorsLabel" destination="cVZ-JL-QXa" id="yUf-vY-FNl"/>
                         <outlet property="timingBar" destination="rnm-3D-ijo" id="f47-qc-rFk"/>
                         <segue destination="q8T-rQ-gMF" kind="presentation" identifier="RPSToResult" id="efV-Nf-h4j"/>
                     </connections>
@@ -912,6 +909,10 @@
                     <navigationItem key="navigationItem" id="n52-kJ-XMB"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="cpuView" destination="92f-pC-Icz" id="waX-RR-yth"/>
+                        <outlet property="opponentLabel" destination="bhg-HB-Ltd" id="E6t-nV-dgC"/>
+                        <outlet property="playerLabel" destination="HOC-AM-C57" id="rf6-jG-oBq"/>
+                        <outlet property="yourView" destination="DoA-HG-Kjv" id="TFK-q9-WfN"/>
                         <segue destination="lSG-xk-d5T" kind="presentation" identifier="ResultToWinner" id="8fy-xO-pRZ"/>
                     </connections>
                 </viewController>
