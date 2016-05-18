@@ -36,6 +36,8 @@ class Game: NSObject {
     var serverPeerID: MCPeerID!
     var localPlayerName: NSString!
     
+    var data: String? = nil
+    
     
     var players: NSMutableDictionary!
     
@@ -111,6 +113,8 @@ extension Game: MCSessionDelegate {
     }
     
     func session(session: MCSession, didReceiveData data: NSData, fromPeer peerID: MCPeerID) {
+        
+        self.data = String(data)
         
     }
     
