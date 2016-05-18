@@ -12,16 +12,16 @@ class RPSViewController: UIViewController
 {
     var weaponString = ""
     
-    @IBOutlet weak var paperText: UILabel!
     
-    @IBOutlet weak var rockText: UILabel!
-    
-    @IBOutlet weak var scissText: UILabel!
 
+    @IBOutlet weak var scissorsLabel: UILabel!
+    @IBOutlet weak var paperLabel: UILabel!
+    @IBOutlet weak var rockLabel: UILabel!
     @IBOutlet weak var timingBar: UIProgressView!
     
     var seconds = 5
     var timer: NSTimer!
+    var game : Game!
     
     override func viewDidLoad()
     {
@@ -62,25 +62,26 @@ class RPSViewController: UIViewController
         let VC = segue.destinationViewController as! RPS2ViewController
         
         VC.weaponString = self.weaponString
+        VC.game = game
         
     }
     
     
     @IBAction func tapRock(sender: UIButton)
     {
-        weaponString = rockText.text!
+        weaponString = "rock"
     }
     
     
     @IBAction func tapPaper(sender: UIButton)
     {
-        weaponString = paperText.text!
+        weaponString = "paper"
     }
     
     
     @IBAction func tapSciss(sender: UIButton)
     {
-        weaponString = scissText.text!
+        weaponString = "scissors"
     }
     
 }

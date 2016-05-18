@@ -17,6 +17,7 @@ class RPSReadyViewController: UIViewController
     var seconds = 3
     
     var timer: NSTimer!
+    var game : Game!
     
     
     override func viewDidLoad()
@@ -47,6 +48,13 @@ class RPSReadyViewController: UIViewController
         
         }
         
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        let VC = segue.destinationViewController as! RPSViewController
+        
+        VC.game = game
     }
     
 

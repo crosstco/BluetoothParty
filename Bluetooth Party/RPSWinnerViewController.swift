@@ -13,6 +13,7 @@ class RPSWinnerViewController: UIViewController {
     
     var winner: String!
     var timer: NSTimer!
+    var game : Game!
     
     @IBOutlet weak var winnerLabel: UILabel!
     
@@ -23,14 +24,33 @@ class RPSWinnerViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         
         timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: Selector("update"), userInfo: nil, repeats: false)
+        if winner == "Tie"
+        {
+            winnerLabel.text = "Tie :|"
+        }
+        else if winner == "You"
+        {
+            winnerLabel.text = "You Win :)"
+        }
+        else
+        {
+            winnerLabel.text = "You opponent wins :("
+        }
     }
 
     
-    func update() {
+    func update()
+    {
        
     
         performSegueWithIdentifier("WinnerToReady", sender: nil)
         
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        let nextVC = segue.destinationViewController as! RPSWinnerViewController
+        nextVC.game = game
     }
     
 }

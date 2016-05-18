@@ -16,7 +16,13 @@ class RPS2ViewController: UIViewController
     var opponentWeaponString = ""
     var timer: NSTimer!
     var seconds = 2
+    var game : Game!
+    var winner : String!
     
+    @IBOutlet weak var opponentLabel: UILabel!
+    @IBOutlet weak var playerLabel: UILabel!
+    @IBOutlet weak var yourView: UIView!
+    @IBOutlet weak var cpuView: UIView!
     
     override func viewDidLoad()
     {
@@ -31,7 +37,8 @@ class RPS2ViewController: UIViewController
         
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "update", userInfo: nil, repeats: true)
         
-        //yourWeapon.text = weaponString
+        playerLabel.text = weaponString
+        opponentLabel.text = opponentWeaponString
     }
     
     
@@ -49,107 +56,36 @@ class RPS2ViewController: UIViewController
         
     }
     
-    
-    @IBAction func tapForResult(sender: UIButton)
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-        //youWin()
+        let nextVC = segue.destinationViewController as! RPSWinnerViewController
+         nextVC.winner = determineWinner()
+        nextVC.game = game
     }
     
-    
-    
-    
-//    func youWin()
-//    {
-//        if(yourWeapon.text == "🖐🏼" && cpuWeapon.text == "👊🏼")
-//        {
-//            yourView.backgroundColor = UIColor.greenColor()
-//            cpuView.backgroundColor = UIColor.redColor()
-//            let alert = UIAlertController(title: "Winner", message: "Nice Job!", preferredStyle: UIAlertControllerStyle.Alert)
-//            let resetGame = UIAlertAction(title: "Play Again?", style: UIAlertActionStyle.Default, handler:
-//                {sender in
-//                    self.opponentWeaponString = ""
-//                    self.cpuWeapon.text = ""
-//                    self.yourView.backgroundColor = UIColor.whiteColor()
-//                    self.cpuView.backgroundColor = UIColor.whiteColor()
-//                    
-//                    
-//            })
-//            alert.addAction(resetGame)
-//            presentViewController(alert, animated: true, completion: nil)
-//            
-//        }
-//        else if(yourWeapon.text == "👊🏼" && cpuWeapon.text == "✌🏼")
-//        {
-//            yourView.backgroundColor = UIColor.greenColor()
-//            cpuView.backgroundColor = UIColor.redColor()
-//            let alert = UIAlertController(title: "Winner!", message: "Nice Job!", preferredStyle: UIAlertControllerStyle.Alert)
-//            let resetGame = UIAlertAction(title: "Play Again?", style: UIAlertActionStyle.Default, handler:
-//                {sender in
-//                    self.computerWeaponString = ""
-//                    self.cpuWeapon.text = ""
-//                    self.yourView.backgroundColor = UIColor.whiteColor()
-//                    self.cpuView.backgroundColor = UIColor.whiteColor()
-//                    
-//            })
-//            alert.addAction(resetGame)
-//            presentViewController(alert, animated: true, completion: nil)
-//            
-//        }
-//        else if(yourWeapon.text == "✌🏼" && cpuWeapon.text == "🖐🏼")
-//        {
-//            yourView.backgroundColor = UIColor.greenColor()
-//            cpuView.backgroundColor = UIColor.redColor()
-//            let alert = UIAlertController(title: "Winner!", message: "Nice Job!", preferredStyle: UIAlertControllerStyle.Alert)
-//            let resetGame = UIAlertAction(title: "Play Again?", style: UIAlertActionStyle.Default, handler:
-//                {sender in
-//                    self.opponentWeaponString = ""
-//                    self.cpuWeapon.text = ""
-//                    self.yourView.backgroundColor = UIColor.whiteColor()
-//                    self.cpuView.backgroundColor = UIColor.whiteColor()
-//                    
-//                    
-//            })
-//            alert.addAction(resetGame)
-//            presentViewController(alert, animated: true, completion: nil)
-//        }
-//        else if( yourWeapon.text == cpuWeapon.text)
-//        {
-//            let alert = UIAlertController(title: "It's a tie!", message: "Computers can read minds... I wonder what's next.", preferredStyle: UIAlertControllerStyle.Alert)
-//            let resetGame = UIAlertAction(title: "Play Again?", style: UIAlertActionStyle.Default, handler:
-//                {sender in
-//                    self.opponentWeaponString = ""
-//                    self.cpuWeapon.text = ""
-//                    self.yourView.backgroundColor = UIColor.whiteColor()
-//                    self.cpuView.backgroundColor = UIColor.whiteColor()
-//                    
-//                    
-//            })
-//            alert.addAction(resetGame)
-//            presentViewController(alert, animated: true, completion: nil)
-//        }
-//        else
-//        {
-//            yourView.backgroundColor = UIColor.redColor()
-//            cpuView.backgroundColor = UIColor.greenColor()
-//            let alert = UIAlertController(title: "You Lose :(", message: "You'll get 'em next time!", preferredStyle: UIAlertControllerStyle.Alert)
-//            let resetGame = UIAlertAction(title: "Play Again?", style: UIAlertActionStyle.Default, handler:
-//                {sender in
-//                    self.opponentWeaponString = ""
-//                    self.cpuWeapon.text = ""
-//                    self.yourView.backgroundColor = UIColor.whiteColor()
-//                    self.cpuView.backgroundColor = UIColor.whiteColor()
-//                    
-//                    
-//                    
-//            })
-//            alert.addAction(resetGame)
-//            presentViewController(alert, animated: true, completion: nil)
-//        }
-//        
-//    }
-//    
-//    
-//    
-//    
-//
+    func determineWinner() -> String
+    {
+        if(weaponString == "🖐🏼" && opponentWeaponString == "👊🏼")
+        {
+            winner = "You"
+        }
+        else if(weaponString == "👊🏼" && opponentWeaponString == "✌🏼")
+        {
+            winner = "You"
+        }
+        else if(weaponString == "✌🏼" && opponentWeaponString == "🖐🏼")
+        {
+            winner = "You"
+        }
+        else if(weaponString == opponentWeaponString)
+        {
+            winner = "Tie"
+        }
+        else
+        {
+            winner = "Opponent"
+        }
+        return winner
+    }
+
 }
