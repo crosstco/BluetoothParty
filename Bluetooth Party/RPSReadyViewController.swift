@@ -8,8 +8,8 @@
 
 import UIKit
 
-class RPSReadyViewController: UIViewController {
-    
+class RPSReadyViewController: UIViewController
+{
     
     @IBOutlet weak var numberLabel: UILabel!
     
@@ -19,11 +19,13 @@ class RPSReadyViewController: UIViewController {
     var timer: NSTimer!
     
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(animated: Bool)
+    {
         super.viewDidAppear(animated)
         
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "update", userInfo: nil, repeats: true)
@@ -31,7 +33,8 @@ class RPSReadyViewController: UIViewController {
         numberLabel.text = "\(seconds)"
     }
     
-    func update() {
+    func update()
+    {
         
         seconds -= 1
         
@@ -45,5 +48,6 @@ class RPSReadyViewController: UIViewController {
         }
         
     }
+    
 
 }

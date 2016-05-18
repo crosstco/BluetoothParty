@@ -57,13 +57,13 @@ class RPSViewController: UIViewController
     }
     
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        
-//        let VC = segue.destinationViewController as! RPS2ViewController
-//        
-//        VC.weaponString = self.weaponString
-//        
-//    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let VC = segue.destinationViewController as! RPS2ViewController
+        
+        VC.weaponString = self.weaponString
+        
+    }
     
     
     @IBAction func tapRock(sender: UIButton)
