@@ -137,6 +137,8 @@ class LobbyListViewController: UIViewController, UITableViewDataSource, UITableV
         var game = Game()
         game.startClientGameWithSession((matchmakingClient?.session)!, playerName: UIDevice.currentDevice().name, serverPeerID: (matchmakingClient?.serverPeerID)!)
         
+        nextVC.game = game
+        
     }
 }
 

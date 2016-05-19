@@ -11,7 +11,7 @@ import MultipeerConnectivity
 
 class RPSViewController: UIViewController
 {
-    var weaponString = ""
+    var weaponString = "paper"
     
     
 
@@ -68,8 +68,9 @@ class RPSViewController: UIViewController
         let peers: [MCPeerID] = [game.other!]
         
         do {
-        try game.session.sendData(data!, toPeers: peers, withMode: MCSessionSendDataMode.Reliable)
+        try game.session.sendData(data!, toPeers: peers, withMode: MCSessionSendDataMode.Unreliable)
         } catch {
+            print("Failed")
         }
         
     }
@@ -77,6 +78,7 @@ class RPSViewController: UIViewController
     
     @IBAction func tapRock(sender: UIButton)
     {
+        print("rock")
         weaponString = "rock"
     }
     

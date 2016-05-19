@@ -77,13 +77,6 @@ class Game: NSObject {
         self.gameState = .WaitingForSignIn
         
         self.delegate?.game(gameWaitingForServerReady: self)
-    
-        
-        
-        var player = Player()
-        player.name = playerName
-        player.peerID = serverPeerID
-        players.setObject(player, forKey: player.peerID)
         
     }
     

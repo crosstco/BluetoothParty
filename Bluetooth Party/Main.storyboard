@@ -377,7 +377,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="myTableView" destination="1Vm-8F-l7i" id="9xq-zS-NNR"/>
-                        <segue destination="q4k-mw-NBj" kind="presentation" identifier="playerToReady" id="gcf-1b-T8k"/>
+                        <segue destination="q4k-mw-NBj" kind="presentation" identifier="playerToReady" id="fcT-dT-9Dv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dgU-eI-T7V" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -992,6 +992,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gcf-1b-T8k"/>
+        <segue reference="fcT-dT-9Dv"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -112,9 +112,9 @@ extension PlayerListViewController: MatchmakingServerDelegate {
         
         dispatch_async(dispatch_get_main_queue()) { 
             self.myTableView.reloadData()
-            
-            self.performSegueWithIdentifier("playerToReady", sender: nil)
         }
+        
+        self.performSegueWithIdentifier("playerToReady", sender: nil)
     }
     
     func matchmakingServer(server: MatchmakingServer, clientDidDisconnect peerID: MCPeerID) {
